@@ -13,6 +13,73 @@
     <meta name="author" content="R. Sugumar, M.B.A.">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Image Area Fix -->
+    <style>
+        .featured-project-card {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: stretch;
+            overflow: hidden;
+        }
+
+        .featured-project-image {
+            width: 100%;
+            min-height: 520px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .featured-project-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .featured-project-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-project-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .featured-project-card {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-project-image {
+                min-height: 400px;
+            }
+
+            .featured-project-image img {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .featured-project-image {
+                min-height: 300px;
+            }
+
+            .featured-project-image img {
+                min-height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -438,9 +505,9 @@
 
                         <p>
                             An AI-powered web application that analyzes
-                            12 customer activity inputs and uses a
-                            Random Forest classification model to predict
-                            customer purchase continuation risk.
+                            12 customer activity inputs and uses a Random Forest
+                            classification model to predict customer purchase
+                            continuation risk.
                         </p>
 
 
@@ -755,144 +822,115 @@
                 </div>
 
 
+
+                <!-- =====================================
+                     PROJECT 05
+                     EV CHARGING DEMAND FORECASTING
+                ====================================== -->
+
+                <div class="featured-project-card">
+
+
+                    <div class="featured-project-image">
+
+                        <img
+                            src="assets/images/EV-Charging-Demand-Forecasting.png"
+                            alt="Autonomous LangGraph AI Multi-Agent EV Charging Demand Forecasting System">
+
+                    </div>
+
+
+                    <div class="featured-project-content">
+
+                        <span class="project-number">
+                            PROJECT 05
+                        </span>
+
+
+                        <h3>
+                            Autonomous LangGraph AI Multi-Agent
+                            EV Charging Demand Forecasting System
+                        </h3>
+
+
+                        <p>
+                            An autonomous multi-agent AI forecasting system
+                            that analyzes EV charging data, performs data
+                            quality validation, exploratory analysis, feature
+                            engineering and time-series analysis, automatically
+                            selects and trains forecasting models, and generates
+                            hourly EV charging demand forecasts for the next
+                            168 hours (7 days).
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Python</span>
+                            <span>LangGraph</span>
+                            <span>LangChain</span>
+                            <span>Groq LLM</span>
+                            <span>Multi-Agent AI</span>
+                            <span>Time Series Forecasting</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Scikit-learn</span>
+                            <span>ARIMA</span>
+                            <span>SARIMA</span>
+                            <span>Prophet</span>
+                            <span>XGBoost</span>
+                            <span>LSTM</span>
+                            <span>Matplotlib</span>
+                            <span>Plotly</span>
+                            <span>ReportLab</span>
+                            <span>Joblib</span>
+                            <span>Google Colab</span>
+
+                        </div>
+
+
+                        <div class="featured-project-buttons">
+
+
+                            <a
+                                href="https://github.com/sugumarranganathan/Autonomous-LangGraph-AI-Multi-Agent-EV-Charging-Demand-Forecasting-System"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                GitHub
+                            </a>
+
+
+                            <a
+                                href="assets/images/EV-Charging-Demand-Forecasting.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                Images
+                            </a>
+
+
+                            <a
+                                href="https://lnkd.in/p/gde-8eyV"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                LinkedIn
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
         </section>
 
 
-
-        <!-- =====================================
-             PROJECT 05
-             EV CHARGING DEMAND FORECASTING
-        ====================================== -->
-        
-        <div class="featured-project-card">
-        
-        
-            <div class="featured-project-image">
-        
-                <img
-                    src="assets/images/EV-Charging-Demand-Forecasting.png"
-                    alt="Autonomous LangGraph AI Multi-Agent EV Charging Demand Forecasting System">
-        
-            </div>
-        
-        
-            <div class="featured-project-content">
-        
-                <span class="project-number">
-                    PROJECT 05
-                </span>
-        
-        
-                <h3>
-                    Autonomous LangGraph AI Multi-Agent
-                    EV Charging Demand Forecasting System
-                </h3>
-        
-        
-                <p>
-                    An autonomous multi-agent AI forecasting system
-                    that analyzes EV charging data, performs data
-                    quality validation, exploratory analysis, feature
-                    engineering and time-series analysis, automatically
-                    selects and trains forecasting models, and generates
-                    hourly EV charging demand forecasts for the next
-                    168 hours (7 days).
-                </p>
-        
-        
-                <div class="project-tags">
-        
-                    <span>Python</span>
-        
-                    <span>LangGraph</span>
-        
-                    <span>LangChain</span>
-        
-                    <span>Groq LLM</span>
-        
-                    <span>Multi-Agent AI</span>
-        
-                    <span>Time Series Forecasting</span>
-        
-                    <span>Pandas</span>
-        
-                    <span>NumPy</span>
-        
-                    <span>Scikit-learn</span>
-        
-                    <span>ARIMA</span>
-        
-                    <span>SARIMA</span>
-        
-                    <span>Prophet</span>
-        
-                    <span>XGBoost</span>
-        
-                    <span>LSTM</span>
-        
-                    <span>Matplotlib</span>
-        
-                    <span>Plotly</span>
-        
-                    <span>ReportLab</span>
-        
-                    <span>Joblib</span>
-        
-                    <span>Google Colab</span>
-        
-                </div>
-        
-        
-                <div class="featured-project-buttons">
-        
-        
-                    <!-- PROJECT 05 GITHUB -->
-        
-                    <a
-                        href="https://github.com/sugumarranganathan/Autonomous-LangGraph-AI-Multi-Agent-EV-Charging-Demand-Forecasting-System"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary">
-        
-                        GitHub
-        
-                    </a>
-        
-        
-                    <!-- PROJECT 05 IMAGE -->
-        
-                    <a
-                        href="assets/images/EV-Charging-Demand-Forecasting.png"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary">
-        
-                        Images
-        
-                    </a>
-        
-        
-                    <!-- PROJECT 05 LINKEDIN -->
-        
-                    <a
-                        href="https://lnkd.in/p/gde-8eyV"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary">
-        
-                        LinkedIn
-        
-                    </a>
-        
-        
-                </div>
-        
-            </div>
-        
-        </div>
-                
 
         <!-- =========================================
              TECHNOLOGY STACK
