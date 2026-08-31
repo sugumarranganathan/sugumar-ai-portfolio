@@ -14,19 +14,20 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Image Area Fix -->
+    <!-- Large Project Image Area - Standardized for Projects 01-06 -->
     <style>
         .featured-project-card {
             display: grid;
             grid-template-columns: 50% 50%;
             align-items: stretch;
             overflow: hidden;
+            min-height: 620px;
         }
 
         .featured-project-image {
             width: 100%;
-            min-height: 520px;
-            height: 100%;
+            height: 620px;
+            min-height: 620px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,7 +38,7 @@
         .featured-project-image img {
             width: 100%;
             height: 100%;
-            min-height: 520px;
+            min-height: 620px;
             object-fit: cover;
             object-position: center;
             display: block;
@@ -59,24 +60,29 @@
         @media (max-width: 900px) {
             .featured-project-card {
                 grid-template-columns: 1fr;
+                min-height: auto;
             }
 
             .featured-project-image {
-                min-height: 400px;
+                height: 500px;
+                min-height: 500px;
             }
 
             .featured-project-image img {
-                min-height: 400px;
+                height: 500px;
+                min-height: 500px;
             }
         }
 
         @media (max-width: 600px) {
             .featured-project-image {
-                min-height: 300px;
+                height: 360px;
+                min-height: 360px;
             }
 
             .featured-project-image img {
-                min-height: 300px;
+                height: 360px;
+                min-height: 360px;
             }
         }
     </style>
@@ -926,101 +932,102 @@
                 </div>
 
 
+
+
+        <!-- =====================================
+                     PROJECT 06
+                     BRIGHT FUTURE COLLEGE AI CHATBOT
+                ====================================== -->
+                
+                <div class="featured-project-card">
+                
+                    <div class="featured-project-image">
+                
+                        <img
+                            src="assets/images/College AI Assistant Chatbot.png"
+                            alt="Bright Future College AI Chatbot">
+                
+                    </div>
+                
+                
+                    <div class="featured-project-content">
+                
+                        <span class="project-number">
+                            PROJECT 06
+                        </span>
+                
+                
+                        <h3>
+                            Bright Future College AI Chatbot
+                        </h3>
+                
+                
+                        <p>
+                            An AI-powered college information assistant that provides
+                            quick and intelligent answers about courses, admissions,
+                            hostel facilities, placements, campus facilities, transport
+                            and student support using a Fine-Tuned Gemini 2.5 Flash model
+                            through Google Vertex AI.
+                        </p>
+                
+                
+                        <div class="project-tags">
+                
+                            <span>Python</span>
+                            <span>Generative AI</span>
+                            <span>Gemini 2.5 Flash</span>
+                            <span>Fine-Tuning</span>
+                            <span>Google Vertex AI</span>
+                            <span>Google Gen AI SDK</span>
+                            <span>FastAPI</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Docker</span>
+                            <span>Google Cloud Run</span>
+                            <span>Cloud Build</span>
+                            <span>Artifact Registry</span>
+                
+                        </div>
+                
+                
+                        <div class="featured-project-buttons">
+                
+                            <a
+                                href="https://github.com/sugumarranganathan/college-ai-assistant"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                GitHub
+                            </a>
+                
+                
+                            <a
+                                href="assets/images/College AI Assistant Chatbot.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                Images
+                            </a>
+                
+                
+                            <a
+                                href="https://bright-future-college-ai-788031406364.us-central1.run.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                Live Demo
+                            </a>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+
             </div>
 
         </section>
-        
-        <!-- =====================================
-             PROJECT 06
-             BRIGHT FUTURE COLLEGE AI CHATBOT
-        ====================================== -->
-        
-        <div class="featured-project-card">
-        
-            <div class="featured-project-image">
-        
-                <img
-                    src="assets/images/College AI Assistant Chatbot.png"
-                    alt="Bright Future College AI Chatbot">
-        
-            </div>
-        
-        
-            <div class="featured-project-content">
-        
-                <span class="project-number">
-                    PROJECT 06
-                </span>
-        
-        
-                <h3>
-                    Bright Future College AI Chatbot
-                </h3>
-        
-        
-                <p>
-                    An AI-powered college information assistant that provides
-                    quick and intelligent answers about courses, admissions,
-                    hostel facilities, placements, campus facilities, transport
-                    and student support using a Fine-Tuned Gemini 2.5 Flash model
-                    through Google Vertex AI.
-                </p>
-        
-        
-                <div class="project-tags">
-        
-                    <span>Python</span>
-                    <span>Generative AI</span>
-                    <span>Gemini 2.5 Flash</span>
-                    <span>Fine-Tuning</span>
-                    <span>Google Vertex AI</span>
-                    <span>Google Gen AI SDK</span>
-                    <span>FastAPI</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Docker</span>
-                    <span>Google Cloud Run</span>
-                    <span>Cloud Build</span>
-                    <span>Artifact Registry</span>
-        
-                </div>
-        
-        
-                <div class="featured-project-buttons">
-        
-                    <a
-                        href="https://github.com/sugumarranganathan/college-ai-assistant"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary">
-                        GitHub
-                    </a>
-        
-        
-                    <a
-                        href="assets/images/Bright-Future-College-AI-Chatbot.png"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary">
-                        Images
-                    </a>
-        
-        
-                    <a
-                        href="https://bright-future-college-ai-788031406364.us-central1.run.app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary">
-                        Live Demo
-                    </a>
-        
-                </div>
-        
-            </div>
-        
-        </div>
-
         
         <!-- =========================================
              TECHNOLOGY STACK
@@ -1073,6 +1080,13 @@
                     <span>Django</span>
 
                     <span>Gmail API</span>
+
+                    <span>Google Gemini</span>
+                    <span>Google Vertex AI</span>
+                    <span>Google Gen AI SDK</span>
+                    <span>Google Cloud Run</span>
+                    <span>Cloud Build</span>
+                    <span>Artifact Registry</span>
 
                     <span>AWS</span>
                     <span>AWS Lambda</span>
