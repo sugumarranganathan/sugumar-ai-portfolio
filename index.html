@@ -21,12 +21,13 @@
             grid-template-columns: 50% 50%;
             align-items: stretch;
             overflow: hidden;
+            min-height: 620px;
         }
 
         .featured-project-image {
             width: 100%;
-            min-height: 520px;
-            height: 100%;
+            height: 620px;
+            min-height: 620px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,7 +38,7 @@
         .featured-project-image img {
             width: 100%;
             height: 100%;
-            min-height: 520px;
+            min-height: 620px;
             object-fit: cover;
             object-position: center;
             display: block;
@@ -59,24 +60,27 @@
         @media (max-width: 900px) {
             .featured-project-card {
                 grid-template-columns: 1fr;
+                min-height: auto;
             }
 
             .featured-project-image {
-                min-height: 400px;
+                height: 500px;
+                min-height: 500px;
             }
 
             .featured-project-image img {
-                min-height: 400px;
+                min-height: 500px;
             }
         }
 
         @media (max-width: 600px) {
             .featured-project-image {
-                min-height: 300px;
+                height: 360px;
+                min-height: 360px;
             }
 
             .featured-project-image img {
-                min-height: 300px;
+                min-height: 360px;
             }
         }
     </style>
@@ -925,10 +929,7 @@
 
                 </div>
 
-
-            </div>
-
-        </section>
+        
         
         <!-- =====================================
              PROJECT 06
@@ -999,7 +1000,7 @@
         
         
                     <a
-                        href="assets/images/Bright-Future-College-AI-Chatbot.png"
+                        href="assets/images/College AI Assistant Chatbot.png"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="btn btn-secondary">
@@ -1021,294 +1022,8 @@
         
         </div>
 
+            </div>
+        </section>
         
         <!-- =========================================
              TECHNOLOGY STACK
-        ========================================== -->
-
-        <section id="technologies"
-            class="section portfolio-technologies">
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-                    <span>
-                        TECHNOLOGY STACK
-                    </span>
-
-
-                    <h2>
-                        Technologies across
-                        my project portfolio.
-                    </h2>
-
-                </div>
-
-
-                <div class="portfolio-tech-list">
-
-                    <span>Python</span>
-                    <span>Machine Learning</span>
-                    <span>Scikit-learn</span>
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-
-                    <span>Generative AI</span>
-                    <span>LLM</span>
-                    <span>RAG</span>
-
-                    <span>LangChain</span>
-                    <span>LangGraph</span>
-
-                    <span>Multi-Agent AI</span>
-
-                    <span>Qdrant</span>
-                    <span>FAISS</span>
-                    <span>Sentence Transformers</span>
-
-                    <span>FastAPI</span>
-                    <span>Gradio</span>
-                    <span>Django</span>
-
-                    <span>Gmail API</span>
-
-                    <span>AWS</span>
-                    <span>AWS Lambda</span>
-                    <span>API Gateway</span>
-                    <span>Amazon ECR</span>
-
-                    <span>Docker</span>
-
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>GitHub Actions</span>
-
-                    <span>CI/CD</span>
-                    <span>MLOps</span>
-                    <span>DevOps</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             PROJECT APPROACH
-        ========================================== -->
-
-        <section class="workflow-section">
-
-            <div class="container">
-
-
-                <div class="section-heading centered">
-
-                    <span>
-                        PROJECT APPROACH
-                    </span>
-
-
-                    <h2>
-                        From problem to
-                        deployable solution.
-                    </h2>
-
-                </div>
-
-
-                <div class="workflow">
-
-
-                    <div class="workflow-step">
-                        <span>01</span>
-                        <strong>Business Problem</strong>
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-                        <span>02</span>
-                        <strong>Data</strong>
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-                        <span>03</span>
-                        <strong>AI / ML</strong>
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-                        <span>04</span>
-                        <strong>Application</strong>
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-                        <span>05</span>
-                        <strong>Deployment</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             CONTACT
-        ========================================== -->
-
-        <section id="contact"
-            class="links-section">
-
-            <div class="container">
-
-
-                <div class="section-heading centered">
-
-                    <span>
-                        LET'S CONNECT
-                    </span>
-
-
-                    <h2>
-                        Explore the projects
-                        and get in touch.
-                    </h2>
-
-
-                    <p>
-                        Interested in AI, Machine Learning,
-                        Generative AI or software development?
-                    </p>
-
-                </div>
-
-
-                <div class="project-links">
-
-
-                    <a href="https://github.com/sugumarranganathan"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-
-                        <strong>
-                            GitHub
-                        </strong>
-
-                        <span>
-                            View Projects →
-                        </span>
-
-                    </a>
-
-
-                    <a href="https://www.linkedin.com/in/sugumar-ranganathan/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-
-                        <strong>
-                            LinkedIn
-                        </strong>
-
-                        <span>
-                            Connect →
-                        </span>
-
-                    </a>
-
-
-                    <a href="mailto:contact.sugumarai@gmail.com"
-                        class="project-link">
-
-                        <strong>
-                            Email
-                        </strong>
-
-                        <span>
-                            Contact Me →
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="footer">
-
-        <div class="container footer-container">
-
-
-            <div>
-
-                <strong>
-                    R. Sugumar, M.B.A.
-                </strong>
-
-
-                <p>
-                    AI • Machine Learning • Generative AI • Cloud
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <a href="#projects">
-                    View Projects ↑
-                </a>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-    <script src="js/script.js"></script>
-
-</body>
-
-</html>
