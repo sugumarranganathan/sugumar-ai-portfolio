@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Enterprise AI Email Automation | R. Sugumar
+    </title>
+
+    <meta name="description"
+        content="Multi-Agent Enterprise Email Assistant using LangGraph, LangChain, Groq, Gmail API, Qdrant RAG, FastAPI and Gradio.">
+
+    <meta name="author"
+        content="R. Sugumar, M.B.A.">
+
+    <link rel="stylesheet"
+        href="../../css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+
+            <a href="../../index.html"
+                class="logo">
+
+                SUGUMAR AI
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="../../index.html#about">
+                    About
+                </a>
+
+                <a href="../../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../../index.html#technologies">
+                    Technologies
+                </a>
+
+                <a href="../../index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PROJECT HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+
+        <div class="container hero-container">
+
+
+            <div class="hero-content">
+
+
+                <span class="project-badge">
+
+                    PROJECT 03 • AGENTIC AI
+
+                </span>
+
+
+                <h1>
+
+                    Enterprise AI Email
+                    <span>Automation</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Multi-Agent Enterprise Email Assistant using
+                    LangGraph, LangChain, Groq, Gmail API,
+                    Qdrant RAG, FastAPI and Gradio.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+
+                    <a href="https://github.com/sugumarranganathan/Enterprise-AI-Email-Automation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary">
+
+                        GitHub →
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/posts/sugumar-ranganathan_artificialintelligence-agenticai-multiagentai-activity-7490405357627043840-GPC9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary">
+
+                        LinkedIn
+
+                    </a>
+
+
+                    <a href="https://colab.research.google.com/drive/18P_QhA24KVsvp3WekvJ1UkEG361etY9a#scrollTo=guxQB7t7zRLc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary">
+
+                        Google Colab
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PREDICTION / PROJECT SUMMARY CARD -->
+
+            <div class="prediction-card">
+
+
+                <div class="prediction-header">
+
+                    <span>
+                        ENTERPRISE AI WORKFLOW
+                    </span>
+
+                    <span class="live-indicator">
+                        ● MULTI-AGENT
+                    </span>
+
+                </div>
+
+
+                <div class="prediction-body">
+
+
+                    <span class="prediction-label">
+
+                        SYSTEM CAPABILITY
+
+                    </span>
+
+
+                    <h2>
+
+                        Intelligent Email Automation
+
+                    </h2>
+
+
+                    <div class="prediction-line">
+
+                        <span>
+                            AI Agents
+                        </span>
+
+                        <strong>
+                            13
+                        </strong>
+
+                    </div>
+
+
+                    <div class="prediction-bar">
+
+                        <div class="prediction-progress"
+                            style="width: 100%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-box">
+
+
+                        <span>
+                            Human-in-the-Loop
+                        </span>
+
+
+                        <strong>
+                            ENABLED
+                        </strong>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BUSINESS PROBLEM
+    ====================================================== -->
+
+    <section class="section problem-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    BUSINESS PROBLEM
+                </span>
+
+
+                <h2>
+
+                    Enterprise email processing
+                    is repetitive and time-consuming.
+
+                </h2>
+
+
+            </div>
+
+
+            <div class="problem-content">
+
+
+                <p>
+
+                    Modern organizations receive hundreds or
+                    thousands of customer emails every day,
+                    including product refund requests, delivery
+                    delays, warranty claims, order cancellations,
+                    billing questions, technical support requests
+                    and customer complaints.
+
+                </p>
+
+
+                <p>
+
+                    Traditional email handling requires employees
+                    to manually read, classify, prioritize,
+                    understand and respond to every message.
+
+                </p>
+
+
+                <p>
+
+                    This can lead to slow response times,
+                    inconsistent replies, human errors, difficulty
+                    following company policies, increased
+                    operational costs and poor customer experience.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOLUTION
+    ====================================================== -->
+
+    <section class="section solution-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    AI SOLUTION
+                </span>
+
+
+                <h2>
+
+                    Multi-Agent AI for
+                    enterprise email operations.
+
+                </h2>
+
+
+                <p>
+
+                    The system automates the complete email
+                    processing workflow while maintaining
+                    policy compliance, response quality and
+                    human oversight.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="solution-grid">
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+
+                        AI analyzes the customer email,
+                        intent, category, urgency and
+                        sentiment.
+
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Retrieve
+                    </h3>
+
+                    <p>
+
+                        Qdrant RAG retrieves relevant
+                        company knowledge and supporting
+                        information.
+
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Validate
+                    </h3>
+
+                    <p>
+
+                        Company policies and business
+                        rules are applied before generating
+                        the response.
+
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Automate
+                    </h3>
+
+                    <p>
+
+                        AI generates, reviews, formats
+                        and sends the final email with
+                        human approval when required.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MULTI-AGENT ARCHITECTURE
+    ====================================================== -->
+
+    <section class="section workflow-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading centered">
+
+
+                <span>
+                    MULTI-AGENT ARCHITECTURE
+                </span>
+
+
+                <h2>
+
+                    13 specialized agents
+                    working together.
+
+                </h2>
+
+
+                <p>
+
+                    Each agent focuses on a specific stage
+                    of the enterprise email workflow.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="workflow">
+
+
+                <div class="workflow-step">
+
+                    <span>01</span>
+
+                    <strong>
+                        Email Listener
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>02</span>
+
+                    <strong>
+                        Classification
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>03</span>
+
+                    <strong>
+                        Priority
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>04</span>
+
+                    <strong>
+                        Sentiment
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>05</span>
+
+                    <strong>
+                        Reader
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="workflow"
+                style="margin-top: 20px;">
+
+
+                <div class="workflow-step">
+
+                    <span>06</span>
+
+                    <strong>
+                        Knowledge / RAG
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>07</span>
+
+                    <strong>
+                        Policy
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>08</span>
+
+                    <strong>
+                        Response Generator
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>09</span>
+
+                    <strong>
+                        Reviewer
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="workflow"
+                style="margin-top: 20px;">
+
+
+                <div class="workflow-step">
+
+                    <span>10</span>
+
+                    <strong>
+                        Formatter
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>11</span>
+
+                    <strong>
+                        Approval
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>12</span>
+
+                    <strong>
+                        Email Sender
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>13</span>
+
+                    <strong>
+                        History Logger
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AGENT RESPONSIBILITIES
+    ====================================================== -->
+
+    <section class="section project-light">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    AGENT RESPONSIBILITIES
+                </span>
+
+
+                <h2>
+
+                    Specialized intelligence
+                    at every stage.
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="solution-grid">
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Email Listener
+                    </h3>
+
+                    <p>
+                        Receives customer emails through
+                        the Gmail API.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Classification
+                    </h3>
+
+                    <p>
+                        Identifies the email category
+                        and customer intent.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Priority
+                    </h3>
+
+                    <p>
+                        Determines the urgency level
+                        of the customer request.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Sentiment
+                    </h3>
+
+                    <p>
+                        Analyzes the emotional tone
+                        of the customer.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Reader
+                    </h3>
+
+                    <p>
+                        Extracts summary, intent,
+                        key information and actions.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Knowledge Agent
+                    </h3>
+
+                    <p>
+                        Retrieves relevant company
+                        information using Qdrant RAG.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        07
+                    </span>
+
+                    <h3>
+                        Policy Agent
+                    </h3>
+
+                    <p>
+                        Applies company policies and
+                        business rules.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        08
+                    </span>
+
+                    <h3>
+                        Response Generator
+                    </h3>
+
+                    <p>
+                        Generates professional customer
+                        responses using Groq LLM.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        09
+                    </span>
+
+                    <h3>
+                        Reviewer
+                    </h3>
+
+                    <p>
+                        Checks response accuracy,
+                        quality and compliance.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        10
+                    </span>
+
+                    <h3>
+                        Formatter
+                    </h3>
+
+                    <p>
+                        Prepares the final professional
+                        email format.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        11
+                    </span>
+
+                    <h3>
+                        Approval Agent
+                    </h3>
+
+                    <p>
+                        Supports Human-in-the-Loop
+                        approval before sending.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        12
+                    </span>
+
+                    <h3>
+                        Email Sender
+                    </h3>
+
+                    <p>
+                        Sends approved responses through
+                        the Gmail API.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <span class="solution-number">
+                        13
+                    </span>
+
+                    <h3>
+                        History Logger
+                    </h3>
+
+                    <p>
+                        Records the workflow history
+                        for tracking and review.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RAG
+    ====================================================== -->
+
+    <section class="section model-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    RETRIEVAL-AUGMENTED GENERATION
+                </span>
+
+
+                <h2>
+
+                    Company knowledge with
+                    Qdrant RAG.
+
+                </h2>
+
+
+                <p>
+
+                    The Knowledge Agent retrieves relevant
+                    information from the enterprise knowledge
+                    base before the response is generated.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="model-grid">
+
+
+                <div class="model-card">
+
+                    <h3>
+                        Refund Policy
+                    </h3>
+
+                    <p>
+                        Retrieves refund-related rules
+                        and requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <h3>
+                        Warranty Policy
+                    </h3>
+
+                    <p>
+                        Retrieves warranty information
+                        relevant to customer requests.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <h3>
+                        Shipping Policy
+                    </h3>
+
+                    <p>
+                        Provides relevant shipping and
+                        delivery information.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <h3>
+                        Company Guidelines
+                    </h3>
+
+                    <p>
+                        Supports responses with internal
+                        company guidelines.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <h3>
+                        Product Documentation
+                    </h3>
+
+                    <p>
+                        Retrieves product-related
+                        information.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <h3>
+                        FAQ / Knowledge Base
+                    </h3>
+
+                    <p>
+                        Provides relevant answers from
+                        stored enterprise knowledge.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         HUMAN IN THE LOOP
+    ====================================================== -->
+
+    <section class="section solution-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading centered">
+
+
+                <span>
+                    HUMAN-IN-THE-LOOP
+                </span>
+
+
+                <h2>
+
+                    AI automation with
+                    human oversight.
+
+                </h2>
+
+
+                <p>
+
+                    The system supports human approval when
+                    required before an email is sent.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="workflow">
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        Generated Email
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        Approval Agent
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        Human Review
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        Approve / Modify
+                    </strong>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        05
+                    </span>
+
+                    <strong>
+                        Email Sender
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <section class="section dashboard-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    INTERACTIVE DASHBOARD
+                </span>
+
+
+                <h2>
+
+                    Gradio enterprise email
+                    automation interface.
+
+                </h2>
+
+
+                <p>
+
+                    The dashboard provides visibility into
+                    email analysis, AI reasoning, retrieved
+                    knowledge, generated responses and
+                    human approval.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="dashboard-features">
+
+
+                <div class="dashboard-feature">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Customer Email
+                    </h3>
+
+                    <p>
+                        Customer email input for
+                        automated processing.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-feature">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        AI Analysis
+                    </h3>
+
+                    <p>
+                        Summary, intent, category,
+                        priority and sentiment.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-feature">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Knowledge & Policy
+                    </h3>
+
+                    <p>
+                        Retrieved company knowledge
+                        and policy validation.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-feature">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        AI Response
+                    </h3>
+
+                    <p>
+                        Generated email with workflow
+                        and approval status.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TECHNOLOGY STACK
+    ====================================================== -->
+
+    <section class="section technology-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    TECHNOLOGY STACK
+                </span>
+
+
+                <h2>
+
+                    Technologies used to build
+                    the enterprise AI system.
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="technology-list">
+
+
+                <span>
+                    Python
+                </span>
+
+                <span>
+                    LangGraph
+                </span>
+
+                <span>
+                    LangChain
+                </span>
+
+                <span>
+                    Groq
+                </span>
+
+                <span>
+                    LLM
+                </span>
+
+                <span>
+                    Gmail API
+                </span>
+
+                <span>
+                    Qdrant
+                </span>
+
+                <span>
+                    Vector Database
+                </span>
+
+                <span>
+                    RAG
+                </span>
+
+                <span>
+                    FastAPI
+                </span>
+
+                <span>
+                    REST API
+                </span>
+
+                <span>
+                    Gradio
+                </span>
+
+                <span>
+                    Google Colab
+                </span>
+
+                <span>
+                    Render
+                </span>
+
+                <span>
+                    Hugging Face
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BUSINESS VALUE
+    ====================================================== -->
+
+    <section class="section value-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    BUSINESS VALUE
+                </span>
+
+
+                <h2>
+
+                    Automating repetitive email
+                    operations while maintaining control.
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="value-grid">
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Reduced Manual Work
+                    </h3>
+
+                    <p>
+                        Automates repetitive email processing
+                        activities.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Faster Responses
+                    </h3>
+
+                    <p>
+                        Accelerates customer email analysis
+                        and response generation.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Policy Compliance
+                    </h3>
+
+                    <p>
+                        Uses company knowledge and policies
+                        before generating responses.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Human Oversight
+                    </h3>
+
+                    <p>
+                        Supports approval workflows for
+                        controlled automation.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECT LINKS
+    ====================================================== -->
+
+    <section class="links-section">
+
+
+        <div class="container">
+
+
+            <div class="section-heading centered">
+
+
+                <span>
+                    PROJECT LINKS
+                </span>
+
+
+                <h2>
+
+                    Explore the complete
+                    Enterprise AI project.
+
+                </h2>
+
+
+                <p>
+
+                    View the source code, project
+                    demonstration, notebook and
+                    project presentation.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="project-links">
+
+
+                <!-- GITHUB -->
+
+                <a href="https://github.com/sugumarranganathan/Enterprise-AI-Email-Automation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+
+
+                    <strong>
+                        GitHub Repository
+                    </strong>
+
+
+                    <span>
+                        View Code →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- LINKEDIN -->
+
+                <a href="https://www.linkedin.com/posts/sugumar-ranganathan_artificialintelligence-agenticai-multiagentai-activity-7490405357627043840-GPC9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+
+
+                    <strong>
+                        LinkedIn Project Post
+                    </strong>
+
+
+                    <span>
+                        View Post →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- COLAB -->
+
+                <a href="https://colab.research.google.com/drive/18P_QhA24KVsvp3WekvJ1UkEG361etY9a#scrollTo=guxQB7t7zRLc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+
+
+                    <strong>
+                        Google Colab
+                    </strong>
+
+
+                    <span>
+                        Open Notebook →
+                    </span>
+
+
+                </a>
+
+
+
+                <!-- BACK TO PORTFOLIO -->
+
+                <a href="../../index.html"
+                    class="project-link">
+
+
+                    <strong>
+                        Portfolio
+                    </strong>
+
+
+                    <span>
+                        ← Back to Portfolio
+                    </span>
+
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="container footer-container">
+
+
+            <div>
+
+
+                <strong>
+                    R. Sugumar, M.B.A.
+                </strong>
+
+
+                <p>
+
+                    AI • Machine Learning •
+                    Generative AI • Agentic AI • Cloud
+
+                </p>
+
+
+            </div>
+
+
+            <div>
+
+
+                <a href="../../index.html">
+
+                    ← Back to Portfolio
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="../../js/script.js"></script>
+
+
+</body>
+
+</html>
