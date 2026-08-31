@@ -346,6 +346,76 @@
         }
     </style>
 
+    <style>
+        /* =========================================
+           EDUCATION
+        ========================================== */
+
+        .portfolio-education {
+            background: #ffffff;
+        }
+
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 1000px;
+        }
+
+        .education-card {
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 20px;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .education-marker {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #f1f5f9;
+            color: #1d4ed8;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .education-content h3 {
+            margin: 0 0 8px;
+        }
+
+        .education-institution,
+        .education-date {
+            margin: 6px 0;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .education-date {
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .education-program {
+            margin: 14px 0 0;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            .education-card {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -374,6 +444,10 @@
 
                 <a href="#career-focus">
                     Career Focus
+                </a>
+
+                <a href="#education">
+                    Education
                 </a>
 
                 <a href="#experience">
@@ -730,6 +804,98 @@
                         build practical solutions that automate processes,
                         improve decision-making, and create business value.
                     </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             EDUCATION
+        ========================================== -->
+
+        <section id="education"
+            class="section portfolio-education">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        EDUCATION
+                    </span>
+
+                    <h2>
+                        Education supporting my transition into AI.
+                    </h2>
+
+                </div>
+
+                <div class="education-list">
+
+                    <div class="education-card">
+
+                        <div class="education-marker">
+                            <span>01</span>
+                        </div>
+
+                        <div class="education-content">
+
+                            <h3>
+                                Master Program in Applied AI, Gen AI &amp; Data Science
+                            </h3>
+
+                            <p class="education-institution">
+                                HOPE AI
+                            </p>
+
+                            <p class="education-date">
+                                Sep 2025 – Sep 2026
+                            </p>
+
+                            <p class="education-program">
+                                Hands-on learning across Python, Machine Learning,
+                                Data Science, Deep Learning, Generative AI, RAG,
+                                AI Agents, LangChain, LangGraph, MCP, Google Vertex AI,
+                                Google Cloud and AWS SageMaker AI.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="education-card">
+
+                        <div class="education-marker">
+                            <span>02</span>
+                        </div>
+
+                        <div class="education-content">
+
+                            <h3>
+                                Master of Business Administration (MBA)
+                            </h3>
+
+                            <p class="education-institution">
+                                Madurai Kamaraj University
+                            </p>
+
+                            <p class="education-date">
+                                Jun 2000 – Apr 2003
+                            </p>
+
+                            <p class="education-program">
+                                Business administration with a foundation in
+                                business, management, marketing and related areas.
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -2223,8 +2389,8 @@
 
             <div>
 
-                <a href="#career-focus">
-                    Career Focus ↑
+                <a href="#education">
+                    Education ↑
                 </a>
 
             </div>
