@@ -260,6 +260,92 @@
             }
         }
     </style>
+
+    <style>
+        /* =========================================
+           CAREER FOCUS
+        ========================================== */
+
+        .portfolio-career-focus {
+            background: #f8fafc;
+        }
+
+        .career-focus-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 42px;
+            border: 1px solid #e5e7eb;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .career-role-label,
+        .career-core-label {
+            display: block;
+            margin-bottom: 14px;
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .career-roles {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px 24px;
+            margin: 0 0 30px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .career-roles li {
+            position: relative;
+            padding: 13px 16px 13px 36px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            color: #334155;
+            background: #ffffff;
+            font-weight: 600;
+        }
+
+        .career-roles li::before {
+            content: "✓";
+            position: absolute;
+            left: 14px;
+            color: #2563eb;
+            font-weight: 800;
+        }
+
+        .career-core {
+            margin: 0 0 28px;
+            color: #334155;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+
+        .career-focus-summary {
+            margin: 0;
+            padding: 24px 26px;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 14px 14px 0;
+            background: #f8fafc;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 700px) {
+            .career-focus-card {
+                padding: 28px 22px;
+            }
+
+            .career-roles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -284,6 +370,10 @@
 
                 <a href="#journey">
                     My Journey
+                </a>
+
+                <a href="#career-focus">
+                    Career Focus
                 </a>
 
                 <a href="#experience">
@@ -580,6 +670,65 @@
                         create practical solutions that can save time, improve
                         decisions, automate work, and create real value for an
                         organization.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CAREER FOCUS
+        ========================================== -->
+
+        <section id="career-focus"
+            class="section portfolio-career-focus">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        CAREER FOCUS
+                    </span>
+
+                    <h2>
+                        AI Automation &amp; Generative AI
+                    </h2>
+
+                </div>
+
+                <div class="career-focus-card">
+
+                    <span class="career-role-label">
+                        Preferred Career Roles
+                    </span>
+
+                    <ul class="career-roles">
+                        <li>AI Automation Developer</li>
+                        <li>Generative AI Developer</li>
+                        <li>AI Application Developer</li>
+                        <li>AI Agent / Agentic AI Developer</li>
+                        <li>AI Solutions Developer</li>
+                        <li>AI Business Analyst</li>
+                    </ul>
+
+                    <span class="career-core-label">
+                        Core Focus
+                    </span>
+
+                    <p class="career-core">
+                        AI Agents • Chatbots • RAG • Workflow Automation •
+                        AI-Powered Business Solutions
+                    </p>
+
+                    <p class="career-focus-summary">
+                        Combining my business experience with AI technology to
+                        build practical solutions that automate processes,
+                        improve decision-making, and create business value.
                     </p>
 
                 </div>
@@ -2074,8 +2223,8 @@
 
             <div>
 
-                <a href="#journey">
-                    My Journey ↑
+                <a href="#career-focus">
+                    Career Focus ↑
                 </a>
 
             </div>
