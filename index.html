@@ -13,7 +13,7 @@
     </title>
 
     <meta name="description"
-        content="R. Sugumar's AI, Machine Learning, Generative AI, RAG, Agentic AI, Cloud and Software Engineering project portfolio.">
+        content="R. Sugumar's AI, Machine Learning, Generative AI, RAG, Agentic AI, Cloud, MLOps and Software Development Portfolio">
 
     <meta name="author"
         content="R. Sugumar, M.B.A.">
@@ -22,15 +22,18 @@
         href="css/style.css">
 
 
+    <!-- =====================================================
+         PROJECT BUTTON / CARD STYLING
+    ====================================================== -->
+
     <style>
 
-        /* =========================================
-           PROJECT CONTENT ONLY
-        ========================================== */
+        /* -------------------------------------------------
+           FEATURED PROJECT CARD
+        -------------------------------------------------- */
 
-        .featured-project-card.project-text-only {
+        .project-text-only {
 
-            display: block;
             padding: 70px;
 
         }
@@ -39,8 +42,8 @@
         .project-text-only
         .featured-project-content {
 
-            max-width: 760px;
-            margin-left: auto;
+            max-width: 850px;
+            margin: 0 auto;
 
         }
 
@@ -48,7 +51,7 @@
         .project-text-only
         .featured-project-content h3 {
 
-            max-width: 700px;
+            max-width: 750px;
 
         }
 
@@ -56,84 +59,94 @@
         .project-text-only
         .featured-project-content p {
 
-            max-width: 700px;
+            max-width: 760px;
+
+            line-height: 1.8;
 
         }
 
 
-        /* =========================================
+
+        /* -------------------------------------------------
            PROJECT BUTTONS
-        ========================================== */
+        -------------------------------------------------- */
 
         .featured-project-buttons {
 
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 12px;
-            margin-top: 28px;
+
+            margin-top: 30px;
 
         }
 
 
         .featured-project-buttons .btn {
 
-            text-decoration: none;
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
-        }
+            text-decoration: none;
 
-
-        /* =========================================
-           PROJECT 02 SEPARATION
-        ========================================== */
-
-        .featured-project-card + .featured-project-card {
-
-            margin-top: 35px;
+            cursor: pointer;
 
         }
 
 
-        /* =========================================
+
+        /* -------------------------------------------------
            IMAGES BUTTON
-        ========================================== */
+        -------------------------------------------------- */
 
         .btn-images {
 
-            border: 1px solid #d8dee9;
-            background: white;
+            background: #ffffff;
+
             color: #111827;
+
+            border: 1px solid #d8dee9;
 
         }
 
 
         .btn-images:hover {
 
-            border-color: #2563eb;
             color: #2563eb;
+
+            border-color: #2563eb;
 
         }
 
 
-        /* =========================================
+
+        /* -------------------------------------------------
+           PROJECT SEPARATION
+        -------------------------------------------------- */
+
+        .featured-project-card
+        + .featured-project-card {
+
+            margin-top: 35px;
+
+        }
+
+
+
+        /* -------------------------------------------------
            MOBILE
-        ========================================== */
+        -------------------------------------------------- */
 
         @media (max-width: 768px) {
 
-            .featured-project-card.project-text-only {
+            .project-text-only {
 
                 padding: 35px 25px;
-
-            }
-
-
-            .project-text-only
-            .featured-project-content {
-
-                margin-left: 0;
 
             }
 
@@ -141,7 +154,8 @@
             .featured-project-buttons {
 
                 flex-direction: column;
-                align-items: stretch;
+
+                width: 100%;
 
             }
 
@@ -159,16 +173,18 @@
 </head>
 
 
+
 <body>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          NAVIGATION
-    ========================================== -->
+    ====================================================== -->
 
     <header class="navbar">
 
         <div class="container nav-container">
+
 
             <a href="index.html"
                 class="logo">
@@ -176,6 +192,7 @@
                 SUGUMAR AI
 
             </a>
+
 
 
             <nav class="nav-menu">
@@ -198,32 +215,42 @@
 
             </nav>
 
+
         </div>
 
     </header>
 
 
 
-    <!-- =========================================
-         HERO
-    ========================================== -->
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
     <main>
 
 
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+
         <section class="portfolio-hero">
+
 
             <div class="container portfolio-hero-container">
 
+
+                <!-- HERO LEFT -->
 
                 <div class="portfolio-hero-content">
 
 
                     <span class="project-badge">
 
-                        AI • MACHINE LEARNING • GENERATIVE AI • CLOUD
+                        AI • MACHINE LEARNING •
+                        GENERATIVE AI • CLOUD
 
                     </span>
+
 
 
                     <h1>
@@ -234,22 +261,29 @@
                     </h1>
 
 
+
                     <h2>
 
-                        AI & Machine Learning Project Portfolio
+                        AI & Machine Learning
+                        Project Portfolio
 
                     </h2>
 
 
+
                     <p>
 
-                        Hands-on portfolio of AI, Machine Learning,
-                        Generative AI, RAG, Agentic AI, Python,
-                        Cloud, MLOps and software development projects.
+                        Hands-on portfolio of AI,
+                        Machine Learning, Generative AI,
+                        RAG, Agentic AI, Python, Cloud,
+                        MLOps and software development
+                        projects.
 
                     </p>
 
 
+
+                    <!-- PORTFOLIO STATS -->
 
                     <div class="portfolio-stats">
 
@@ -267,6 +301,7 @@
                         </div>
 
 
+
                         <div>
 
                             <strong>
@@ -278,6 +313,7 @@
                             </span>
 
                         </div>
+
 
 
                         <div>
@@ -297,6 +333,8 @@
 
 
 
+                    <!-- HERO BUTTONS -->
+
                     <div class="hero-buttons">
 
 
@@ -308,6 +346,7 @@
                         </a>
 
 
+
                         <a href="https://github.com/sugumarranganathan"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -316,6 +355,7 @@
                             GitHub
 
                         </a>
+
 
 
                         <a href="https://www.linkedin.com/in/sugumar-ranganathan/"
@@ -335,6 +375,8 @@
 
 
 
+                <!-- HERO RIGHT -->
+
                 <div class="portfolio-intro-card">
 
 
@@ -343,6 +385,7 @@
                         WHAT I BUILD
 
                     </span>
+
 
 
                     <h3>
@@ -370,6 +413,7 @@
                         </div>
 
 
+
                         <div>
 
                             <span>
@@ -381,6 +425,7 @@
                             </strong>
 
                         </div>
+
 
 
                         <div>
@@ -396,6 +441,7 @@
                         </div>
 
 
+
                         <div>
 
                             <span>
@@ -409,6 +455,7 @@
                         </div>
 
 
+
                         <div>
 
                             <span>
@@ -420,6 +467,7 @@
                             </strong>
 
                         </div>
+
 
 
                         <div>
@@ -443,13 +491,14 @@
 
             </div>
 
+
         </section>
 
 
 
-        <!-- =========================================
-             ABOUT
-        ========================================== -->
+        <!-- =================================================
+             ABOUT SECTION
+        ================================================== -->
 
         <section id="about"
             class="section portfolio-about">
@@ -464,6 +513,7 @@
                     <span>
                         ABOUT THE PORTFOLIO
                     </span>
+
 
 
                     <h2>
@@ -483,21 +533,24 @@
 
                     <p>
 
-                        This portfolio presents hands-on projects
-                        developed across Machine Learning,
-                        Generative AI, RAG, Agentic AI, data
-                        analytics, cloud computing and software
+                        This portfolio presents hands-on
+                        projects developed across Machine
+                        Learning, Generative AI, RAG,
+                        Agentic AI, data analytics,
+                        cloud computing and software
                         application development.
 
                     </p>
 
 
+
                     <p>
 
-                        Each project focuses on a practical problem
-                        and demonstrates the journey from data and
-                        business requirements to AI/ML implementation,
-                        application development and deployment.
+                        Each project focuses on a practical
+                        problem and demonstrates the journey
+                        from data and business requirements
+                        to AI/ML implementation, application
+                        development and deployment.
 
                     </p>
 
@@ -512,9 +565,9 @@
 
 
 
-        <!-- =========================================
-             PROJECT CATEGORIES
-        ========================================== -->
+        <!-- =================================================
+             PROJECT DOMAINS
+        ================================================== -->
 
         <section class="section category-section">
 
@@ -528,6 +581,7 @@
                     <span>
                         PROJECT DOMAINS
                     </span>
+
 
 
                     <h2>
@@ -545,6 +599,8 @@
                 <div class="category-grid">
 
 
+                    <!-- CATEGORY 01 -->
+
                     <div class="category-card">
 
                         <span>
@@ -556,13 +612,17 @@
                         </h3>
 
                         <p>
-                            LLM-powered applications and
-                            AI solutions.
+
+                            LLM-powered applications
+                            and AI solutions.
+
                         </p>
 
                     </div>
 
 
+
+                    <!-- CATEGORY 02 -->
 
                     <div class="category-card">
 
@@ -575,13 +635,17 @@
                         </h3>
 
                         <p>
+
                             Retrieval-Augmented Generation,
                             embeddings and vector search.
+
                         </p>
 
                     </div>
 
 
+
+                    <!-- CATEGORY 03 -->
 
                     <div class="category-card">
 
@@ -594,13 +658,17 @@
                         </h3>
 
                         <p>
-                            LangChain, LangGraph and
-                            multi-agent workflows.
+
+                            LangChain, LangGraph,
+                            AutoGen and multi-agent workflows.
+
                         </p>
 
                     </div>
 
 
+
+                    <!-- CATEGORY 04 -->
 
                     <div class="category-card">
 
@@ -613,13 +681,17 @@
                         </h3>
 
                         <p>
+
                             Classification, prediction,
                             forecasting and analytics.
+
                         </p>
 
                     </div>
 
 
+
+                    <!-- CATEGORY 05 -->
 
                     <div class="category-card">
 
@@ -632,13 +704,17 @@
                         </h3>
 
                         <p>
+
                             Cloud-based AI applications,
                             APIs and serverless systems.
+
                         </p>
 
                     </div>
 
 
+
+                    <!-- CATEGORY 06 -->
 
                     <div class="category-card">
 
@@ -651,8 +727,10 @@
                         </h3>
 
                         <p>
-                            Docker, CI/CD, deployment and
-                            production workflows.
+
+                            Docker, CI/CD, deployment
+                            and production workflows.
+
                         </p>
 
                     </div>
@@ -668,9 +746,9 @@
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              FEATURED PROJECTS
-        ========================================== -->
+        ================================================== -->
 
         <section id="projects"
             class="section featured-projects">
@@ -687,6 +765,7 @@
                     </span>
 
 
+
                     <h2>
 
                         Selected projects
@@ -695,11 +774,12 @@
                     </h2>
 
 
+
                     <p>
 
-                        More projects will be added to this
-                        portfolio as the project collection
-                        is built.
+                        More projects will be added
+                        to this portfolio as the project
+                        collection is built.
 
                     </p>
 
@@ -708,9 +788,9 @@
 
 
 
-                <!-- =====================================
+                <!-- =================================================
                      PROJECT 01
-                ====================================== -->
+                ================================================== -->
 
                 <div class="featured-project-card project-text-only">
 
@@ -725,6 +805,7 @@
                         </span>
 
 
+
                         <h3>
 
                             E-commerce Purchase Behaviour
@@ -733,16 +814,20 @@
                         </h3>
 
 
+
                         <p>
 
-                            An AI-powered web application that analyzes
-                            12 customer activity inputs and uses a
-                            Random Forest classification model to predict
+                            An AI-powered web application
+                            that analyzes 12 customer activity
+                            inputs and uses a Random Forest
+                            classification model to predict
                             customer purchase continuation risk.
 
                         </p>
 
 
+
+                        <!-- TECHNOLOGIES -->
 
                         <div class="project-tags">
 
@@ -772,6 +857,10 @@
                             </span>
 
                             <span>
+                                SQLite
+                            </span>
+
+                            <span>
                                 Render
                             </span>
 
@@ -780,8 +869,12 @@
 
 
 
+                        <!-- BUTTONS -->
+
                         <div class="featured-project-buttons">
 
+
+                            <!-- VIEW PROJECT -->
 
                             <a href="projects/ecommerce-purchase-behaviour-ai/index.html"
                                 class="btn btn-primary">
@@ -790,6 +883,9 @@
 
                             </a>
 
+
+
+                            <!-- GITHUB -->
 
                             <a href="https://github.com/sugumarranganathan/E-commerce_Purchase_Behavior_AI"
                                 target="_blank"
@@ -801,7 +897,10 @@
                             </a>
 
 
-                            <a href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/tree/main/assets/images"
+
+                            <!-- DIRECT PROJECT IMAGE -->
+
+                            <a href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/blob/main/assets/images/ecommerce-purchase-behaviour-dashboard.png"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="btn btn-images">
@@ -821,9 +920,9 @@
 
 
 
-                <!-- =====================================
+                <!-- =================================================
                      PROJECT 02
-                ====================================== -->
+                ================================================== -->
 
                 <div class="featured-project-card project-text-only">
 
@@ -838,6 +937,7 @@
                         </span>
 
 
+
                         <h3>
 
                             AI News Summarizer &
@@ -846,17 +946,21 @@
                         </h3>
 
 
+
                         <p>
 
-                            A next-generation multi-agent AI news
-                            intelligence platform that retrieves the
-                            latest news, generates concise AI-powered
-                            summaries and translates them into natural
-                            Tamil using specialized AI agents.
+                            A next-generation multi-agent AI
+                            news intelligence platform using
+                            AutoGen that retrieves the latest
+                            news, generates concise AI-powered
+                            summaries and translates them into
+                            natural Tamil.
 
                         </p>
 
 
+
+                        <!-- TECHNOLOGIES -->
 
                         <div class="project-tags">
 
@@ -874,6 +978,10 @@
                             </span>
 
                             <span>
+                                LLM
+                            </span>
+
+                            <span>
                                 Groq
                             </span>
 
@@ -882,7 +990,15 @@
                             </span>
 
                             <span>
+                                REST API
+                            </span>
+
+                            <span>
                                 GNews API
+                            </span>
+
+                            <span>
+                                Web Search
                             </span>
 
                             <span>
@@ -902,8 +1018,12 @@
 
 
 
+                        <!-- BUTTONS -->
+
                         <div class="featured-project-buttons">
 
+
+                            <!-- VIEW PROJECT -->
 
                             <a href="projects/ai-news-summarizer-tamil-translator/index.html"
                                 class="btn btn-primary">
@@ -912,6 +1032,9 @@
 
                             </a>
 
+
+
+                            <!-- GITHUB -->
 
                             <a href="https://github.com/sugumarranganathan/AI-News-Summarizer"
                                 target="_blank"
@@ -923,7 +1046,10 @@
                             </a>
 
 
-                            <a href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/tree/main/assets/images"
+
+                            <!-- DIRECT PROJECT IMAGE -->
+
+                            <a href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/blob/main/assets/images/ai-news-summarizer-tamil-translator.png"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="btn btn-images">
@@ -949,9 +1075,9 @@
 
 
 
-        <!-- =========================================
-             TECHNOLOGIES
-        ========================================== -->
+        <!-- =================================================
+             TECHNOLOGY STACK
+        ================================================== -->
 
         <section id="technologies"
             class="section portfolio-technologies">
@@ -966,6 +1092,7 @@
                     <span>
                         TECHNOLOGY STACK
                     </span>
+
 
 
                     <h2>
@@ -1078,9 +1205,9 @@
 
 
 
-        <!-- =========================================
-             PORTFOLIO APPROACH
-        ========================================== -->
+        <!-- =================================================
+             PROJECT APPROACH
+        ================================================== -->
 
         <section class="workflow-section">
 
@@ -1094,6 +1221,7 @@
                     <span>
                         PROJECT APPROACH
                     </span>
+
 
 
                     <h2>
@@ -1124,9 +1252,11 @@
                     </div>
 
 
+
                     <div class="workflow-arrow">
                         →
                     </div>
+
 
 
                     <div class="workflow-step">
@@ -1142,9 +1272,11 @@
                     </div>
 
 
+
                     <div class="workflow-arrow">
                         →
                     </div>
+
 
 
                     <div class="workflow-step">
@@ -1160,9 +1292,11 @@
                     </div>
 
 
+
                     <div class="workflow-arrow">
                         →
                     </div>
+
 
 
                     <div class="workflow-step">
@@ -1178,9 +1312,11 @@
                     </div>
 
 
+
                     <div class="workflow-arrow">
                         →
                     </div>
+
 
 
                     <div class="workflow-step">
@@ -1206,9 +1342,9 @@
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              CONTACT
-        ========================================== -->
+        ================================================== -->
 
         <section id="contact"
             class="links-section">
@@ -1225,12 +1361,14 @@
                     </span>
 
 
+
                     <h2>
 
                         Explore the projects
                         and get in touch.
 
                     </h2>
+
 
 
                     <p>
@@ -1247,6 +1385,8 @@
 
                 <div class="project-links">
 
+
+                    <!-- GITHUB -->
 
                     <a href="https://github.com/sugumarranganathan"
                         target="_blank"
@@ -1268,6 +1408,8 @@
 
 
 
+                    <!-- LINKEDIN -->
+
                     <a href="https://www.linkedin.com/in/sugumar-ranganathan/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1287,6 +1429,8 @@
                     </a>
 
 
+
+                    <!-- EMAIL -->
 
                     <a href="mailto:contact.sugumarai@gmail.com"
                         class="project-link">
@@ -1318,9 +1462,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =====================================================
          FOOTER
-    ========================================== -->
+    ====================================================== -->
 
     <footer class="footer">
 
@@ -1334,6 +1478,7 @@
                 <strong>
                     R. Sugumar, M.B.A.
                 </strong>
+
 
 
                 <p>
@@ -1367,6 +1512,10 @@
     </footer>
 
 
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="js/script.js"></script>
 
