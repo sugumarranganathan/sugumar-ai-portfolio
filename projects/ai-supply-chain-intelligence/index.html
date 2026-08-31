@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Supply Chain Intelligence | SCI-BOT | Sugumar AI</title>
+
+    <meta name="description"
+          content="AI Supply Chain Intelligence – Delay Detection & Solution BOT (SCI-BOT), a multi-agent AI supply chain intelligence system using LangGraph, LangChain, RAG, FAISS, Groq, FastAPI and Gradio.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #111827;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1746d1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #1746d1;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 90px 0 70px;
+            background:
+                radial-gradient(circle at 85% 20%, #dbe7ff 0, transparent 30%),
+                radial-gradient(circle at 15% 80%, #e4f2ff 0, transparent 30%),
+                #ffffff;
+        }
+
+        .hero-content {
+            max-width: 950px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .project-number {
+            display: inline-block;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.08;
+            margin-bottom: 25px;
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero-subtitle {
+            max-width: 850px;
+            margin: auto;
+            font-size: 19px;
+            color: #596579;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.22);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1f2937;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        /* TECHNOLOGY PILLS */
+
+        .tech-section {
+            padding: 25px 0 65px;
+        }
+
+        .tech-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech {
+            padding: 8px 15px;
+            background: #ffffff;
+            border: 1px solid #dbe1ea;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-label {
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 44px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            color: #5b6575;
+            max-width: 850px;
+            font-size: 16px;
+        }
+
+        /* PROBLEM */
+
+        .problem {
+            background: #ffffff;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #64748b;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            color: #64748b;
+        }
+
+        /* ARCHITECTURE */
+
+        .architecture {
+            background: #f3f6fb;
+        }
+
+        .workflow {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .agent {
+            background: white;
+            border: 1px solid #e0e6ef;
+            border-radius: 14px;
+            padding: 22px;
+            position: relative;
+        }
+
+        .agent-number {
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .agent h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .agent p {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* RAG */
+
+        .rag-box {
+            margin-top: 35px;
+            background: #111827;
+            color: white;
+            padding: 35px;
+            border-radius: 18px;
+            overflow-x: auto;
+        }
+
+        .rag-flow {
+            font-family: monospace;
+            font-size: 15px;
+            white-space: pre-wrap;
+            line-height: 2;
+        }
+
+        /* FEATURES */
+
+        .features-grid {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .feature {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 24px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* BUSINESS */
+
+        .business {
+            background: #ffffff;
+        }
+
+        .benefits {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .benefit {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 23px;
+            border-radius: 14px;
+            font-weight: 700;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            background:
+                linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .cta .section-text {
+            margin: auto;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #93c5fd;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .problem-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .hero {
+                padding: 65px 0 50px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .workflow,
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <a href="https://sugumarranganathan.github.io/sugumar-ai-portfolio/"
+           class="logo">
+            SUGUMAR AI
+        </a>
+
+        <nav class="nav-links">
+            <a href="https://sugumarranganathan.github.io/sugumar-ai-portfolio/#about">
+                About
+            </a>
+
+            <a href="https://sugumarranganathan.github.io/sugumar-ai-portfolio/#projects">
+                Projects
+            </a>
+
+            <a href="https://sugumarranganathan.github.io/sugumar-ai-portfolio/#technologies">
+                Technologies
+            </a>
+
+            <a href="https://sugumarranganathan.github.io/sugumar-ai-portfolio/#contact">
+                Contact
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="project-number">
+            PROJECT 04
+        </div>
+
+        <h1>
+            AI Supply Chain Intelligence
+            <span>– SCI-BOT</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Delay Detection & Solution BOT — an AI-powered multi-agent
+            supply chain intelligence system for shipment tracking,
+            delay detection, supplier analysis, weather analysis,
+            risk assessment and business decision support.
+        </p>
+
+        <div class="buttons">
+
+            <!-- View Project -->
+            <a class="btn btn-primary"
+               href="https://colab.research.google.com/drive/1efP92B8uC8yQoMGnydca1crzOVCKhY6S#scrollTo=ktk_v7iQuIxR"
+               target="_blank">
+                View Project →
+            </a>
+
+            <!-- GitHub -->
+            <a class="btn btn-secondary"
+               href="https://github.com/sugumarranganathan/AI-Supply-Chain-Intelligence-Delay-Detection-Solution-BOT"
+               target="_blank">
+                GitHub
+            </a>
+
+            <!-- Images / PDF for now -->
+            <a class="btn btn-secondary"
+               href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/blob/main/assets/images/AI-Supply-Chain-Intelligence-Delay-Detection-Solution_BOT.pdf"
+               target="_blank">
+                Images
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="btn btn-secondary"
+               href="https://www.linkedin.com/posts/sugumar-ranganathan_multi-agent-chatbot-activity-7488821704685920256-4Ecj"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNOLOGY STACK -->
+
+<section class="tech-section">
+
+    <div class="container">
+
+        <div class="tech-list">
+
+            <span class="tech">Python</span>
+            <span class="tech">LangGraph</span>
+            <span class="tech">LangChain</span>
+            <span class="tech">Multi-Agent AI</span>
+            <span class="tech">Groq LLM</span>
+            <span class="tech">RAG</span>
+            <span class="tech">FAISS</span>
+            <span class="tech">Sentence Transformers</span>
+            <span class="tech">Conversation Memory</span>
+            <span class="tech">FastAPI</span>
+            <span class="tech">Gradio</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROBLEM STATEMENT -->
+
+<section class="problem">
+
+    <div class="container">
+
+        <div class="section-label">
+            PROBLEM STATEMENT
+        </div>
+
+        <h2 class="section-title">
+            Making supply-chain decisions more intelligent.
+        </h2>
+
+        <p class="section-text">
+            Supply chain and logistics companies often face challenges
+            in tracking shipments, identifying delays, monitoring supplier
+            performance, evaluating weather impact and assessing business
+            risks.
+        </p>
+
+        <div class="problem-grid">
+
+            <div class="card">
+                <h3>Traditional Challenge</h3>
+
+                <ul>
+                    <li>Manual shipment analysis</li>
+                    <li>Delayed identification of risks</li>
+                    <li>Limited supplier visibility</li>
+                    <li>Weather impact requires manual analysis</li>
+                    <li>Difficult to determine next actions</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>SCI-BOT Solution</h3>
+
+                <p>
+                    SCI-BOT combines multi-agent AI, RAG, conversation
+                    memory and external business tools to analyse
+                    shipment situations and provide actionable
+                    recommendations.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OBJECTIVES -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            OBJECTIVES
+        </div>
+
+        <h2 class="section-title">
+            From shipment tracking to intelligent decisions.
+        </h2>
+
+        <div class="features-grid">
+
+            <div class="feature">
+                <h3>🚚 Shipment Tracking</h3>
+                <p>
+                    Track shipments using multiple search methods.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>⏱ Delay Detection</h3>
+                <p>
+                    Identify potential shipment delays automatically.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>📚 Knowledge Retrieval</h3>
+                <p>
+                    Retrieve relevant supply-chain information using RAG.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🏭 Supplier Analysis</h3>
+                <p>
+                    Analyse supplier availability and related risks.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🌦 Weather Analysis</h3>
+                <p>
+                    Evaluate weather conditions that may affect delivery.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>⚠️ Risk Assessment</h3>
+                <p>
+                    Evaluate shipment risks and generate business insights.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MULTI AGENT ARCHITECTURE -->
+
+<section class="architecture">
+
+    <div class="container">
+
+        <div class="section-label">
+            MULTI-AGENT ARCHITECTURE
+        </div>
+
+        <h2 class="section-title">
+            Specialized agents working together.
+        </h2>
+
+        <p class="section-text">
+            Instead of relying on a single AI component, SCI-BOT divides
+            responsibilities among specialized agents coordinated through
+            a LangGraph workflow.
+        </p>
+
+        <div class="workflow">
+
+            <div class="agent">
+                <div class="agent-number">01</div>
+                <h3>Input Agent</h3>
+                <p>Accepts and validates the customer request.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">02</div>
+                <h3>Customer Lookup Agent</h3>
+                <p>Retrieves relevant customer information.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">03</div>
+                <h3>RAG Retriever Agent</h3>
+                <p>Retrieves relevant supply-chain knowledge.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">04</div>
+                <h3>Shipment Agent</h3>
+                <p>Retrieves shipment information and status.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">05</div>
+                <h3>Supplier Agent</h3>
+                <p>Retrieves and analyses supplier information.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">06</div>
+                <h3>Weather Agent</h3>
+                <p>Retrieves weather conditions affecting shipments.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">07</div>
+                <h3>Risk Analysis Agent</h3>
+                <p>Evaluates shipment and business risks.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">08</div>
+                <h3>LLM Agent</h3>
+                <p>Uses Groq LLM to generate the business report.</p>
+            </div>
+
+            <div class="agent">
+                <div class="agent-number">09</div>
+                <h3>Output Agent</h3>
+                <p>Displays the final AI-generated response.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WORKFLOW -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            LANGGRAPH WORKFLOW
+        </div>
+
+        <h2 class="section-title">
+            From customer request to professional AI report.
+        </h2>
+
+        <div class="rag-box">
+
+            <div class="rag-flow">
+Customer
+    ↓
+Input Validation
+    ↓
+Customer Lookup Agent
+    ↓
+RAG Retrieval Agent
+    ↓
+Shipment Agent
+    ↓
+Supplier Agent
+    ↓
+Weather Agent
+    ↓
+Risk Analysis Agent
+    ↓
+LLM Agent — Groq
+    ↓
+Professional AI Report
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RAG -->
+
+<section class="architecture">
+
+    <div class="container">
+
+        <div class="section-label">
+            RETRIEVAL-AUGMENTED GENERATION
+        </div>
+
+        <h2 class="section-title">
+            Domain knowledge before AI reasoning.
+        </h2>
+
+        <p class="section-text">
+            SCI-BOT retrieves domain-specific knowledge before generating
+            responses. Sentence Transformers create embeddings and FAISS
+            performs semantic retrieval to provide relevant context to
+            the Groq LLM.
+        </p>
+
+        <div class="rag-box">
+
+            <div class="rag-flow">
+Documents
+    ↓
+Text Splitter
+    ↓
+Sentence Transformer Embeddings
+    ↓
+FAISS Vector Database
+    ↓
+Semantic Search
+    ↓
+Relevant Context
+    ↓
+Groq LLM
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEMORY -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            CONVERSATION MEMORY
+        </div>
+
+        <h2 class="section-title">
+            Context-aware supply-chain conversations.
+        </h2>
+
+        <p class="section-text">
+            Conversation memory maintains interaction context, enabling
+            follow-up questions, reducing repeated requests and improving
+            conversation continuity.
+        </p>
+
+        <div class="features-grid">
+
+            <div class="feature">
+                <h3>Context-Aware Responses</h3>
+                <p>
+                    Maintains relevant conversation context across interactions.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Follow-Up Questions</h3>
+                <p>
+                    Users can continue the conversation without repeating
+                    previous information.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AI REPORT -->
+
+<section class="problem">
+
+    <div class="container">
+
+        <div class="section-label">
+            AI GENERATED REPORT
+        </div>
+
+        <h2 class="section-title">
+            Turning supply-chain data into business insight.
+        </h2>
+
+        <div class="features-grid">
+
+            <div class="feature">
+                <h3>Executive Summary</h3>
+                <p>
+                    Concise overview of the shipment situation.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Shipment Status</h3>
+                <p>
+                    Current shipment information and detected issues.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Weather Impact</h3>
+                <p>
+                    Analysis of potential weather-related delivery impact.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Supplier Analysis</h3>
+                <p>
+                    Supplier availability and related operational factors.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Risk Assessment</h3>
+                <p>
+                    AI-assisted evaluation of shipment risks.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Recommended Actions</h3>
+                <p>
+                    Actionable recommendations for business decision making.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESS BENEFITS -->
+
+<section class="business">
+
+    <div class="container">
+
+        <div class="section-label">
+            BUSINESS BENEFITS
+        </div>
+
+        <h2 class="section-title">
+            Intelligent supply-chain decision support.
+        </h2>
+
+        <div class="benefits">
+
+            <div class="benefit">
+                🚚 Intelligent Shipment Tracking
+            </div>
+
+            <div class="benefit">
+                ⚡ Faster Delay Detection
+            </div>
+
+            <div class="benefit">
+                📊 Improved Logistics Visibility
+            </div>
+
+            <div class="benefit">
+                🤖 AI-Assisted Decision Making
+            </div>
+
+            <div class="benefit">
+                📉 Reduced Manual Analysis
+            </div>
+
+            <div class="benefit">
+                👥 Better Customer Service
+            </div>
+
+            <div class="benefit">
+                ⚙️ Increased Operational Efficiency
+            </div>
+
+            <div class="benefit">
+                📈 Scalable AI Architecture
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="section-label">
+            EXPLORE SCI-BOT
+        </div>
+
+        <h2 class="section-title">
+            See the complete AI supply-chain workflow.
+        </h2>
+
+        <p class="section-text">
+            Explore the implementation, multi-agent architecture,
+            RAG pipeline and AI-powered supply-chain decision support.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary"
+               href="https://colab.research.google.com/drive/1efP92B8uC8yQoMGnydca1crzOVCKhY6S#scrollTo=ktk_v7iQuIxR"
+               target="_blank">
+                Open Project →
+            </a>
+
+            <a class="btn btn-secondary"
+               href="https://github.com/sugumarranganathan/AI-Supply-Chain-Intelligence-Delay-Detection-Solution-BOT"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+        <div class="buttons">
+
+            <a class="btn btn-secondary"
+               href="https://sugumarranganathan.github.io/sugumar-ai-portfolio/#projects">
+                ← Back to Portfolio
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            <strong>R. Sugumar, M.B.A.</strong>
+        </p>
+
+        <p>
+            AI • Machine Learning • Generative AI • Agentic AI • Cloud
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:contact.sugumarai@gmail.com">
+                contact.sugumarai@gmail.com
+            </a>
+        </p>
+
+        <p style="margin-top: 12px;">
+            © 2026 Sugumar AI. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
