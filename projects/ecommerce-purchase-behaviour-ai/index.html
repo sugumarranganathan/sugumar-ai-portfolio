@@ -5,371 +5,976 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>E-commerce Purchase Behavior Prediction AI</title>
+    <title>E-commerce Purchase Behaviour Prediction AI</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="E-commerce Purchase Behaviour Prediction AI using Python, Machine Learning, Random Forest and Django.">
+
+    <meta name="author" content="R. Sugumar, M.B.A.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <header class="navbar">
 
-        <div class="logo">
-            E-Commerce AI
-        </div>
+        <div class="container nav-container">
 
-        <nav>
-            <a href="#problem">Problem</a>
-            <a href="#solution">Solution</a>
-            <a href="#technology">Technology</a>
-            <a href="#links">Links</a>
-        </nav>
+            <a href="../../index.html" class="logo">
+                SUGUMAR AI
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="../../index.html">
+                    Home
+                </a>
+
+                <a href="#problem">
+                    Problem
+                </a>
+
+                <a href="#solution">
+                    Solution
+                </a>
+
+                <a href="#technology">
+                    Technologies
+                </a>
+
+                <a href="#links">
+                    Links
+                </a>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
-        <div class="hero-content">
+    <main>
 
-            <p class="project-label">
-                MACHINE LEARNING • DJANGO • AI
-            </p>
+        <section class="hero">
 
-            <h1>
-                E-commerce Purchase
-                <span>Behavior Prediction AI</span>
-            </h1>
+            <div class="container hero-container">
 
-            <p class="hero-description">
-                An AI-powered web application that predicts
-                customer purchase continuation risk using
-                Machine Learning and real-time customer activity data.
-            </p>
+                <div class="hero-content">
 
-            <div class="hero-buttons">
+                    <span class="project-badge">
+                        AI • MACHINE LEARNING • DJANGO
+                    </span>
 
-                <a href="#problem" class="btn primary">
-                    Explore Project
+                    <h1>
+                        E-commerce Purchase
+                        <span>Behaviour Prediction AI</span>
+                    </h1>
+
+                    <p class="hero-description">
+
+                        An AI-powered web application that analyzes
+                        customer activity data and predicts customer
+                        purchase continuation risk using Machine Learning.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#problem" class="btn btn-primary">
+                            Explore Project
+                        </a>
+
+                        <a href="https://github.com/sugumarranganathan/E-commerce_Purchase_Behavior_AI"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-secondary">
+
+                            GitHub Repository
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI Prediction Preview -->
+
+                <div class="prediction-card">
+
+                    <div class="prediction-header">
+
+                        <span>
+                            AI PREDICTION DASHBOARD
+                        </span>
+
+                        <span class="live-indicator">
+                            ● LIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="prediction-body">
+
+                        <p class="prediction-label">
+                            Purchase Continuation Risk
+                        </p>
+
+                        <h2>
+                            AI Prediction
+                        </h2>
+
+                        <div class="prediction-line">
+
+                            <span>
+                                Confidence Score
+                            </span>
+
+                            <span>
+                                ML Model Output
+                            </span>
+
+                        </div>
+
+
+                        <div class="prediction-bar">
+
+                            <div class="prediction-progress"></div>
+
+                        </div>
+
+
+                        <div class="risk-box">
+
+                            <span>
+                                Risk Status
+                            </span>
+
+                            <strong>
+                                Prediction Ready
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT OVERVIEW
+        ========================== -->
+
+        <section class="section overview">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        PROJECT OVERVIEW
+                    </span>
+
+                    <h2>
+                        Predict customer behaviour
+                        before inactivity.
+                    </h2>
+
+                </div>
+
+
+                <div class="overview-grid">
+
+                    <div class="overview-card">
+
+                        <h3>
+                            12
+                        </h3>
+
+                        <p>
+                            Customer Activity Inputs
+                        </p>
+
+                    </div>
+
+
+                    <div class="overview-card">
+
+                        <h3>
+                            Random Forest
+                        </h3>
+
+                        <p>
+                            Machine Learning Classification
+                        </p>
+
+                    </div>
+
+
+                    <div class="overview-card">
+
+                        <h3>
+                            Django
+                        </h3>
+
+                        <p>
+                            Web Application Framework
+                        </p>
+
+                    </div>
+
+
+                    <div class="overview-card">
+
+                        <h3>
+                            Real-Time
+                        </h3>
+
+                        <p>
+                            Prediction Dashboard
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BUSINESS PROBLEM
+        ========================== -->
+
+        <section id="problem" class="section problem-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        01 — BUSINESS PROBLEM
+                    </span>
+
+                    <h2>
+                        Identify customers before
+                        they become inactive.
+                    </h2>
+
+                </div>
+
+
+                <div class="problem-content">
+
+                    <p>
+
+                        E-commerce companies generate large amounts
+                        of customer activity and purchase data.
+
+                        However, identifying customers who may stop
+                        purchasing can be challenging using traditional
+                        analysis methods.
+
+                    </p>
+
+
+                    <p>
+
+                        Businesses need an effective way to analyze
+                        customer behaviour and identify potential
+                        purchase continuation risks early, allowing
+                        them to take proactive retention and
+                        re-engagement actions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOLUTION
+        ========================== -->
+
+        <section id="solution" class="section solution-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        02 — SOLUTION
+                    </span>
+
+                    <h2>
+                        AI-powered customer
+                        behaviour prediction.
+                    </h2>
+
+                </div>
+
+
+                <div class="solution-grid">
+
+
+                    <div class="solution-card">
+
+                        <div class="solution-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Customer Input
+                        </h3>
+
+                        <p>
+
+                            Capture structured customer
+                            activity and purchase-related
+                            information through the web dashboard.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="solution-card">
+
+                        <div class="solution-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Data Processing
+                        </h3>
+
+                        <p>
+
+                            Process customer input and convert
+                            categorical information using the
+                            saved label encoders.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="solution-card">
+
+                        <div class="solution-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Random Forest
+                        </h3>
+
+                        <p>
+
+                            The trained Random Forest classification
+                            model analyzes the processed customer
+                            activity data.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="solution-card">
+
+                        <div class="solution-number">
+                            04
+                        </div>
+
+                        <h3>
+                            AI Prediction
+                        </h3>
+
+                        <p>
+
+                            The application generates a purchase
+                            continuation prediction and presents
+                            the result through the dashboard.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORKFLOW
+        ========================== -->
+
+        <section class="workflow-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span>
+                        AI / ML WORKFLOW
+                    </span>
+
+                    <h2>
+                        From customer data to prediction.
+                    </h2>
+
+                </div>
+
+
+                <div class="workflow">
+
+                    <div class="workflow-step">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            Customer Input
+                        </strong>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            Data Processing
+                        </strong>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+                            Label Encoding
+                        </strong>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+                            Random Forest
+                        </strong>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <span>
+                            05
+                        </span>
+
+                        <strong>
+                            AI Prediction
+                        </strong>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <span>
+                            06
+                        </span>
+
+                        <strong>
+                            Risk Status
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
+
+        <section class="section dashboard-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        03 — DASHBOARD
+                    </span>
+
+                    <h2>
+                        Customer input and
+                        AI prediction dashboard.
+                    </h2>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-placeholder">
+
+                            <span>
+                                CUSTOMER INPUT
+                            </span>
+
+                            <h3>
+                                Customer Input Dashboard
+                            </h3>
+
+                            <p>
+                                Structured customer activity
+                                and purchase-related inputs.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-placeholder">
+
+                            <span>
+                                AI OUTPUT
+                            </span>
+
+                            <h3>
+                                AI Prediction Dashboard
+                            </h3>
+
+                            <p>
+                                Prediction, confidence score
+                                and risk status.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="image-note">
+
+                    Project screenshots will be added here.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BUSINESS VALUE
+        ========================== -->
+
+        <section class="section value-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        04 — BUSINESS VALUE
+                    </span>
+
+                    <h2>
+                        Turning customer data into
+                        actionable insights.
+                    </h2>
+
+                </div>
+
+
+                <div class="value-grid">
+
+                    <div class="value-card">
+
+                        <h3>
+                            Early Identification
+                        </h3>
+
+                        <p>
+
+                            Identify customers who may be
+                            at risk of becoming inactive.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="value-card">
+
+                        <h3>
+                            Customer Retention
+                        </h3>
+
+                        <p>
+
+                            Support proactive customer
+                            retention strategies.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="value-card">
+
+                        <h3>
+                            Targeted Re-engagement
+                        </h3>
+
+                        <p>
+
+                            Help businesses focus remarketing
+                            and re-engagement efforts.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="value-card">
+
+                        <h3>
+                            Data-driven Decisions
+                        </h3>
+
+                        <p>
+
+                            Provide prediction-based insights
+                            through a simple dashboard.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TECHNOLOGIES
+        ========================== -->
+
+        <section id="technology" class="section technology-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        05 — TECHNOLOGY STACK
+                    </span>
+
+                    <h2>
+                        Technologies used to build
+                        the application.
+                    </h2>
+
+                </div>
+
+
+                <div class="technology-list">
+
+                    <span>Python</span>
+
+                    <span>Pandas</span>
+
+                    <span>NumPy</span>
+
+                    <span>Scikit-learn</span>
+
+                    <span>Random Forest</span>
+
+                    <span>Django</span>
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>SQLite</span>
+
+                    <span>Git</span>
+
+                    <span>GitHub</span>
+
+                    <span>Render</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT FILES / MODEL
+        ========================== -->
+
+        <section class="section model-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        MACHINE LEARNING COMPONENT
+                    </span>
+
+                    <h2>
+                        Trained model and
+                        preprocessing components.
+                    </h2>
+
+                </div>
+
+
+                <div class="model-grid">
+
+                    <div class="model-card">
+
+                        <h3>
+                            Random Forest Model
+                        </h3>
+
+                        <p>
+                            Trained classification model used
+                            to generate customer behaviour predictions.
+                        </p>
+
+                        <code>
+                            fashion_churn_rf_model.pkl
+                        </code>
+
+                    </div>
+
+
+                    <div class="model-card">
+
+                        <h3>
+                            Label Encoders
+                        </h3>
+
+                        <p>
+                            Saved encoders used to transform
+                            categorical customer information.
+                        </p>
+
+                        <code>
+                            fashion_rf_label_encoders.pkl
+                        </code>
+
+                    </div>
+
+
+                    <div class="model-card">
+
+                        <h3>
+                            Target Encoder
+                        </h3>
+
+                        <p>
+                            Saved target encoding component
+                            used during prediction processing.
+                        </p>
+
+                        <code>
+                            fashion_rf_target_encoder.pkl
+                        </code>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT LINKS
+        ========================== -->
+
+        <section id="links" class="links-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span>
+                        PROJECT RESOURCES
+                    </span>
+
+                    <h2>
+                        Explore the project.
+                    </h2>
+
+                    <p>
+                        View the source code, project documentation
+                        and development journey.
+                    </p>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="https://github.com/sugumarranganathan/E-commerce_Purchase_Behavior_AI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link">
+
+                        <strong>
+                            GitHub Repository
+                        </strong>
+
+                        <span>
+                            View Source Code →
+                        </span>
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/posts/sugumar-ranganathan_ecommerce-d2c-customerretention-activity-7450154618350632960-ush5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link">
+
+                        <strong>
+                            LinkedIn Post
+                        </strong>
+
+                        <span>
+                            View Project Post →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div>
+
+                <strong>
+                    E-commerce Purchase Behaviour Prediction AI
+                </strong>
+
+                <p>
+                    R. Sugumar, M.B.A.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <a href="../../index.html">
+                    ← Back to Portfolio
                 </a>
 
-                <a href="https://github.com/sugumarranganathan/E-commerce_Purchase_Behavior_AI"
-                   target="_blank"
-                   class="btn secondary">
-                    GitHub
-                </a>
-
             </div>
 
         </div>
-
-
-        <!-- Prediction Card -->
-        <div class="prediction-card">
-
-            <div class="card-header">
-                <span>AI PREDICTION</span>
-                <span class="status">LIVE</span>
-            </div>
-
-            <div class="risk-title">
-                Purchase Continuation Risk
-            </div>
-
-            <div class="risk-value">
-                Prediction
-            </div>
-
-            <div class="confidence">
-                Confidence Score
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-
-            <div class="risk-status">
-                Risk Status
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Business Problem -->
-    <section id="problem" class="section">
-
-        <div class="section-heading">
-
-            <p>01 — BUSINESS PROBLEM</p>
-
-            <h2>
-                Identify customers before
-                they become inactive.
-            </h2>
-
-        </div>
-
-        <div class="problem-content">
-
-            <p>
-                E-commerce companies need to identify customers
-                who may stop purchasing before they become inactive.
-                Understanding customer behavior early can help
-                businesses take proactive retention and
-                re-engagement actions.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Solution -->
-    <section id="solution" class="section solution-section">
-
-        <div class="section-heading">
-
-            <p>02 — SOLUTION</p>
-
-            <h2>
-                AI-powered purchase behavior prediction
-            </h2>
-
-        </div>
-
-        <div class="solution-grid">
-
-            <div class="solution-card">
-
-                <div class="number">01</div>
-
-                <h3>
-                    Customer Input
-                </h3>
-
-                <p>
-                    Capture structured customer activity
-                    and purchase-related information.
-                </p>
-
-            </div>
-
-
-            <div class="solution-card">
-
-                <div class="number">02</div>
-
-                <h3>
-                    ML Processing
-                </h3>
-
-                <p>
-                    Process customer data and apply
-                    the trained Machine Learning model.
-                </p>
-
-            </div>
-
-
-            <div class="solution-card">
-
-                <div class="number">03</div>
-
-                <h3>
-                    Prediction
-                </h3>
-
-                <p>
-                    Generate customer purchase
-                    continuation risk prediction.
-                </p>
-
-            </div>
-
-
-            <div class="solution-card">
-
-                <div class="number">04</div>
-
-                <h3>
-                    Risk Status
-                </h3>
-
-                <p>
-                    Display prediction, confidence score
-                    and risk status through the dashboard.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Workflow -->
-    <section class="workflow">
-
-        <p class="workflow-label">
-            AI WORKFLOW
-        </p>
-
-        <div class="workflow-flow">
-
-            <span>Customer Input</span>
-
-            <b>→</b>
-
-            <span>ML Processing</span>
-
-            <b>→</b>
-
-            <span>Prediction</span>
-
-            <b>→</b>
-
-            <span>Confidence Score</span>
-
-            <b>→</b>
-
-            <span>Risk Status</span>
-
-        </div>
-
-    </section>
-
-
-    <!-- Business Value -->
-    <section class="section">
-
-        <div class="section-heading">
-
-            <p>03 — BUSINESS VALUE</p>
-
-            <h2>
-                Turning customer data into
-                actionable insights.
-            </h2>
-
-        </div>
-
-        <div class="value-grid">
-
-            <div>
-                <h3>Early Identification</h3>
-                <p>
-                    Identify customers who may be at risk
-                    of becoming inactive.
-                </p>
-            </div>
-
-            <div>
-                <h3>Customer Retention</h3>
-                <p>
-                    Support proactive customer retention
-                    strategies.
-                </p>
-            </div>
-
-            <div>
-                <h3>Targeted Re-engagement</h3>
-                <p>
-                    Help businesses focus remarketing
-                    efforts on relevant customers.
-                </p>
-            </div>
-
-            <div>
-                <h3>Data-driven Decisions</h3>
-                <p>
-                    Provide prediction-based insights
-                    through a simple dashboard.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Technologies -->
-    <section id="technology" class="section technology-section">
-
-        <div class="section-heading">
-
-            <p>04 — TECHNOLOGY STACK</p>
-
-            <h2>
-                Built with Python and Machine Learning
-            </h2>
-
-        </div>
-
-        <div class="tech-list">
-
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>Scikit-learn</span>
-            <span>Random Forest</span>
-            <span>Django</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>SQLite</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Render</span>
-
-        </div>
-
-    </section>
-
-
-    <!-- Links -->
-    <section id="links" class="links-section">
-
-        <p>PROJECT RESOURCES</p>
-
-        <h2>
-            Explore the project
-        </h2>
-
-        <div class="link-buttons">
-
-            <a href="https://github.com/sugumarranganathan/E-commerce_Purchase_Behavior_AI"
-               target="_blank">
-                GitHub Repository
-            </a>
-
-            <a href="https://www.linkedin.com/posts/sugumar-ranganathan_ecommerce-d2c-customerretention-activity-7450154618350632960-ush5"
-               target="_blank">
-                LinkedIn Post
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            E-commerce Purchase Behavior Prediction AI
-        </p>
-
-        <p>
-            R. Sugumar, M.B.A.
-        </p>
 
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <!-- JavaScript -->
+    <script src="../../js/script.js"></script>
 
 </body>
 
