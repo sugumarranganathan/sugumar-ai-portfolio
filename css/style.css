@@ -1,0 +1,849 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #111827;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #111827;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding: 110px 0 100px;
+
+    background:
+        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.12), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(14, 165, 233, 0.10), transparent 30%),
+        #ffffff;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.project-badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 50px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    margin-top: 24px;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    color: #6b7280;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #111827;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================================
+   AI PREDICTION CARD
+========================================= */
+
+.prediction-card {
+    padding: 26px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.10);
+}
+
+.prediction-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.live-indicator {
+    color: #16a34a;
+}
+
+.prediction-body {
+    padding-top: 28px;
+}
+
+.prediction-label {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.prediction-body h2 {
+    margin-top: 8px;
+
+    font-size: 30px;
+}
+
+.prediction-line {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.prediction-bar {
+    height: 10px;
+
+    margin-top: 12px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e5e7eb;
+}
+
+.prediction-progress {
+    width: 76%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #111827;
+}
+
+.risk-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: #f3f4f6;
+}
+
+.risk-box span {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.risk-box strong {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+}
+
+.section-heading.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin-top: 15px;
+
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================
+   OVERVIEW
+========================================= */
+
+.overview {
+    background: #f7f8fc;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.overview-card {
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: #ffffff;
+}
+
+.overview-card h3 {
+    font-size: 25px;
+}
+
+.overview-card p {
+    margin-top: 8px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BUSINESS PROBLEM
+========================================= */
+
+.problem-section {
+    background: #ffffff;
+}
+
+.problem-content {
+    max-width: 850px;
+}
+
+.problem-content p {
+    margin-bottom: 25px;
+
+    color: #4b5563;
+
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   SOLUTION
+========================================= */
+
+.solution-section {
+    background: #f7f8fc;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.solution-card {
+    padding: 30px;
+
+    min-height: 260px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.solution-number {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.solution-card h3 {
+    margin-top: 45px;
+
+    font-size: 22px;
+}
+
+.solution-card p {
+    margin-top: 12px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WORKFLOW
+========================================= */
+
+.workflow-section {
+    padding: 100px 0;
+
+    background: #111827;
+    color: #ffffff;
+}
+
+.workflow-section .section-heading > span {
+    color: #93c5fd;
+}
+
+.workflow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.workflow-step {
+    min-width: 130px;
+
+    padding: 20px;
+
+    border: 1px solid #374151;
+    border-radius: 12px;
+
+    background: #1f2937;
+
+    text-align: center;
+}
+
+.workflow-step span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #93c5fd;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.workflow-step strong {
+    font-size: 13px;
+}
+
+.workflow-arrow {
+    color: #9ca3af;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-section {
+    background: #ffffff;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.dashboard-card {
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    background: #f3f4f6;
+}
+
+.dashboard-placeholder {
+    min-height: 350px;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.dashboard-placeholder span {
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.dashboard-placeholder h3 {
+    margin-top: 15px;
+
+    font-size: 25px;
+}
+
+.dashboard-placeholder p {
+    max-width: 400px;
+
+    margin-top: 12px;
+
+    color: #6b7280;
+}
+
+.image-note {
+    margin-top: 20px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   BUSINESS VALUE
+========================================= */
+
+.value-section {
+    background: #f7f8fc;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    padding: 35px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: #ffffff;
+}
+
+.value-card h3 {
+    font-size: 21px;
+}
+
+.value-card p {
+    margin-top: 12px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   TECHNOLOGY
+========================================= */
+
+.technology-section {
+    background: #ffffff;
+}
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.technology-list span {
+    padding: 12px 18px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 50px;
+
+    background: #f9fafb;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MACHINE LEARNING COMPONENT
+========================================= */
+
+.model-section {
+    background: #f7f8fc;
+}
+
+.model-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.model-card {
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: #ffffff;
+}
+
+.model-card h3 {
+    font-size: 20px;
+}
+
+.model-card p {
+    margin: 15px 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.model-card code {
+    display: block;
+
+    padding: 12px;
+
+    overflow-x: auto;
+
+    border-radius: 8px;
+
+    background: #111827;
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PROJECT LINKS
+========================================= */
+
+.links-section {
+    padding: 110px 0;
+
+    background: #111827;
+    color: #ffffff;
+}
+
+.links-section .section-heading > span {
+    color: #93c5fd;
+}
+
+.links-section .section-heading p {
+    margin-top: 15px;
+
+    color: #9ca3af;
+}
+
+.project-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+
+    border: 1px solid #374151;
+    border-radius: 14px;
+
+    background: #1f2937;
+
+    transition: 0.3s ease;
+}
+
+.project-link:hover {
+    transform: translateY(-3px);
+
+    border-color: #6b7280;
+}
+
+.project-link strong {
+    font-size: 16px;
+}
+
+.project-link span {
+    color: #93c5fd;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 35px 0;
+
+    background: #0b1120;
+
+    color: #ffffff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin-top: 5px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.footer a {
+    color: #93c5fd;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .model-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        min-height: 65px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        justify-content: center;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .overview-grid,
+    .solution-grid,
+    .dashboard-grid,
+    .value-grid,
+    .project-links {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow {
+        flex-direction: column;
+    }
+
+    .workflow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+
+        text-align: center;
+    }
+
+}
