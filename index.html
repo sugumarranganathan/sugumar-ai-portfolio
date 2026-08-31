@@ -2,24 +2,911 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Sugumar AI | AI & Machine Learning Project Portfolio
-    </title>
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="R. Sugumar, M.B.A. - AI, Machine Learning, Generative AI, Agentic AI, RAG, Cloud, MLOps and Software Development Project Portfolio.">
+          content="R. Sugumar, M.B.A. - AI, Machine Learning, Generative AI, Agentic AI, RAG, Cloud, MLOps and software development project portfolio.">
 
     <meta name="author"
-        content="R. Sugumar, M.B.A.">
+          content="R. Sugumar, M.B.A.">
 
-    <link rel="stylesheet"
-        href="css/style.css">
+    <title>Sugumar AI | AI & Machine Learning Portfolio</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #ffffff;
+            color: #111827;
+
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #64748b;
+            max-width: 760px;
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.96);
+
+            border-bottom:
+                1px solid #e5e7eb;
+
+            backdrop-filter: blur(12px);
+        }
+
+        .nav {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #1746d1;
+
+            font-size: 20px;
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #475569;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+
+                radial-gradient(
+                    circle at 90% 10%,
+                    #e7edff 0,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    #e8f7ff 0,
+                    transparent 30%
+                ),
+
+                #ffffff;
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.05fr
+                0.95fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .hero-label {
+            color: #2563eb;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(54px, 8vw, 88px);
+
+            line-height: 0.98;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 32px;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero-title {
+            color: #29486b;
+
+            font-size: clamp(28px, 4vw, 42px);
+
+            line-height: 1.2;
+
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            color: #64748b;
+
+            font-size: 17px;
+
+            max-width: 650px;
+        }
+
+
+        /* HERO STATS */
+
+        .stats {
+            display: flex;
+
+            gap: 48px;
+
+            margin-top: 38px;
+        }
+
+        .stat-number {
+            font-size: 28px;
+
+            font-weight: 800;
+        }
+
+        .stat-label {
+            color: #64748b;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* HERO BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-top: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding:
+                13px
+                22px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+
+            background: #2563eb;
+
+            box-shadow:
+                0 10px 25px
+                rgba(37,99,235,0.22);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+
+            transform:
+                translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+
+            border:
+                1px solid #d1d5db;
+
+            color: #374151;
+        }
+
+        .btn-secondary:hover {
+            border-color: #2563eb;
+
+            color: #2563eb;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================================
+           HERO RIGHT CARD
+        ========================================= */
+
+        .hero-card {
+            background: #ffffff;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 26px;
+
+            padding: 38px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(15,23,42,0.10);
+        }
+
+        .hero-card-label {
+            color: #2563eb;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-card h2 {
+            font-size: 27px;
+
+            line-height: 1.25;
+
+            margin-bottom: 25px;
+        }
+
+        .build-list {
+            list-style: none;
+        }
+
+        .build-list li {
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+            padding: 16px 0;
+
+            border-bottom:
+                1px solid #e5e7eb;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+        .build-number {
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            border-radius: 8px;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+            background: #ffffff;
+        }
+
+        .about-box {
+            max-width: 850px;
+        }
+
+        .about-box p {
+            color: #64748b;
+
+            font-size: 17px;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =========================================
+           PROJECT DOMAINS
+        ========================================= */
+
+        .domains {
+            background: #f6f8fc;
+        }
+
+        .domain-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+            margin-top: 42px;
+        }
+
+        .domain-card {
+            background: #ffffff;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 17px;
+
+            padding: 32px;
+
+            min-height: 220px;
+
+            transition: 0.25s;
+        }
+
+        .domain-card:hover {
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(15,23,42,0.08);
+        }
+
+        .domain-number {
+            color: #2563eb;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 35px;
+        }
+
+        .domain-card h3 {
+            font-size: 21px;
+
+            margin-bottom: 14px;
+        }
+
+        .domain-card p {
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FEATURED PROJECTS
+        ========================================= */
+
+        .projects {
+            background: #ffffff;
+        }
+
+        .projects-intro {
+            margin-bottom: 45px;
+        }
+
+
+        /* PROJECT CARD */
+
+        .project-card {
+            display: grid;
+
+            grid-template-columns:
+                120px
+                1fr;
+
+            gap: 35px;
+
+            background: #f8fafc;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 20px;
+
+            padding: 38px;
+
+            margin-bottom: 25px;
+
+            transition: 0.25s;
+        }
+
+        .project-card:hover {
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 18px 45px
+                rgba(15,23,42,0.07);
+        }
+
+        .project-number {
+            color: #2563eb;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            padding-top: 6px;
+        }
+
+        .project-content h3 {
+            font-size: clamp(26px, 4vw, 38px);
+
+            line-height: 1.15;
+
+            margin-bottom: 18px;
+        }
+
+        .project-content h3 a:hover {
+            color: #2563eb;
+        }
+
+        .project-description {
+            color: #64748b;
+
+            font-size: 16px;
+
+            max-width: 800px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* TECHNOLOGY TAGS */
+
+        .project-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: #ffffff;
+
+            border:
+                1px solid #d7dee8;
+
+            border-radius: 30px;
+
+            padding:
+                7px
+                13px;
+
+            color: #475569;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* PROJECT BUTTONS */
+
+        .project-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .project-btn {
+            display: inline-block;
+
+            padding:
+                11px
+                17px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            border:
+                1px solid #d1d5db;
+
+            background: #ffffff;
+
+            color: #374151;
+
+            transition: 0.2s;
+        }
+
+        .project-btn:hover {
+            color: #2563eb;
+
+            border-color: #2563eb;
+
+            transform:
+                translateY(-2px);
+        }
+
+        .project-btn.primary {
+            background: #2563eb;
+
+            color: #ffffff;
+
+            border-color: #2563eb;
+
+            box-shadow:
+                0 8px 20px
+                rgba(37,99,235,0.18);
+        }
+
+        .project-btn.primary:hover {
+            background: #1d4ed8;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           TECHNOLOGIES
+        ========================================= */
+
+        .technologies {
+            background: #f6f8fc;
+        }
+
+        .technology-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 35px;
+        }
+
+        .technology {
+            background: #ffffff;
+
+            border:
+                1px solid #dbe2eb;
+
+            border-radius: 30px;
+
+            padding:
+                10px
+                17px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #374151;
+        }
+
+
+        /* =========================================
+           PROJECT APPROACH
+        ========================================= */
+
+        .approach {
+            background: #ffffff;
+        }
+
+        .approach-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 14px;
+
+            margin-top: 40px;
+        }
+
+        .approach-card {
+            background: #f8fafc;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 15px;
+
+            padding: 25px 18px;
+
+            text-align: center;
+        }
+
+        .approach-number {
+            color: #2563eb;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .approach-card h3 {
+            font-size: 15px;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact {
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ffffff
+                );
+
+            text-align: center;
+        }
+
+        .contact .section-description {
+            margin:
+                0
+                auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #111827;
+
+            color: #ffffff;
+
+            padding: 40px 0;
+
+            text-align: center;
+        }
+
+        .footer-name {
+            font-size: 18px;
+
+            font-weight: 800;
+
+            margin-bottom: 6px;
+        }
+
+        .footer-text {
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+        }
+
+        .footer-email {
+            color: #93c5fd;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .domain-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .approach-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding:
+                    70px 0;
+            }
+
+            .section {
+                padding:
+                    65px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .stats {
+                gap: 25px;
+                flex-wrap: wrap;
+            }
+
+            .hero-card {
+                padding: 25px;
+            }
+
+            .domain-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                grid-template-columns: 1fr;
+
+                padding: 25px;
+
+                gap: 10px;
+            }
+
+            .project-number {
+                padding-top: 0;
+            }
+
+            .approach-grid {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .hero-buttons,
+            .contact-buttons,
+            .project-buttons {
+                flex-direction: column;
+            }
+
+            .btn,
+            .project-btn {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -27,1351 +914,1276 @@
 <body>
 
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+<!-- =========================================
+     HEADER
+========================================= -->
 
-    <header class="navbar">
+<header>
 
-        <div class="container nav-container">
+    <div class="container nav">
 
+        <a
+            class="logo"
+            href="#home">
+            SUGUMAR AI
+        </a>
 
-            <a href="#home"
-                class="logo">
+        <nav class="nav-links">
 
-                SUGUMAR AI
-
+            <a href="#about">
+                About
             </a>
 
+            <a href="#projects">
+                Projects
+            </a>
 
-            <nav class="nav-menu">
+            <a href="#technologies">
+                Technologies
+            </a>
 
-                <a href="#about">
-                    About
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<main id="home">
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+
+        <!-- LEFT -->
+
+        <div>
+
+            <div class="hero-label">
+                AI • MACHINE LEARNING • GENERATIVE AI • CLOUD
+            </div>
+
+
+            <h1>
+                <span>R. Sugumar,</span>
+                <span>M.B.A.</span>
+            </h1>
+
+
+            <h2 class="hero-title">
+                AI & Machine Learning Project Portfolio
+            </h2>
+
+
+            <p class="hero-description">
+
+                Hands-on portfolio of AI, Machine Learning,
+                Generative AI, RAG, Agentic AI, Python,
+                Cloud, MLOps and software development projects.
+
+            </p>
+
+
+            <div class="stats">
+
+                <div>
+
+                    <div class="stat-number">
+                        34+
+                    </div>
+
+                    <div class="stat-label">
+                        PROJECTS
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="stat-number">
+                        AI
+                    </div>
+
+                    <div class="stat-label">
+                        & ML
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="stat-number">
+                        Cloud
+                    </div>
+
+                    <div class="stat-label">
+                        & DEPLOYMENT
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    class="btn btn-primary"
+                    href="#projects">
+                    Explore Projects
                 </a>
 
-                <a href="#projects">
-                    Projects
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://github.com/sugumarranganathan"
+                    target="_blank">
+                    GitHub
                 </a>
 
-                <a href="#technologies">
-                    Technologies
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://www.linkedin.com/in/sugumar-ranganathan/"
+                    target="_blank">
+                    LinkedIn
                 </a>
 
-                <a href="#contact">
-                    Contact
-                </a>
+            </div>
 
-            </nav>
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="hero-card">
+
+            <div class="hero-card-label">
+                WHAT I BUILD
+            </div>
+
+
+            <h2>
+                From business problem to
+                working AI solution.
+            </h2>
+
+
+            <ul class="build-list">
+
+                <li>
+                    <span class="build-number">
+                        01
+                    </span>
+
+                    Machine Learning
+                </li>
+
+
+                <li>
+                    <span class="build-number">
+                        02
+                    </span>
+
+                    Generative AI
+                </li>
+
+
+                <li>
+                    <span class="build-number">
+                        03
+                    </span>
+
+                    RAG & Vector Search
+                </li>
+
+
+                <li>
+                    <span class="build-number">
+                        04
+                    </span>
+
+                    Agentic AI
+                </li>
+
+
+                <li>
+                    <span class="build-number">
+                        05
+                    </span>
+
+                    AWS & Cloud
+                </li>
+
+
+                <li>
+                    <span class="build-number">
+                        06
+                    </span>
+
+                    MLOps & DevOps
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section
+    id="about"
+    class="section about">
+
+    <div class="container">
+
+        <div class="section-label">
+            ABOUT THE PORTFOLIO
+        </div>
+
+
+        <h2 class="section-title">
+            A collection of hands-on
+            technology projects.
+        </h2>
+
+
+        <div class="about-box">
+
+            <p>
+                This portfolio presents hands-on projects
+                developed across Machine Learning,
+                Generative AI, RAG, Agentic AI,
+                data analytics, cloud computing
+                and software application development.
+            </p>
+
+
+            <p>
+                Each project focuses on a practical problem
+                and demonstrates the journey from data and
+                business requirements to AI/ML implementation,
+                application development and deployment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PROJECT DOMAINS
+========================================= -->
+
+<section class="section domains">
+
+    <div class="container">
+
+        <div class="section-label">
+            PROJECT DOMAINS
+        </div>
+
+
+        <h2 class="section-title">
+            34+ projects across multiple
+            technology areas.
+        </h2>
+
+
+        <div class="domain-grid">
+
+
+            <div class="domain-card">
+
+                <div class="domain-number">
+                    01
+                </div>
+
+                <h3>
+                    Generative AI
+                </h3>
+
+                <p>
+                    LLM-powered applications
+                    and AI solutions.
+                </p>
+
+            </div>
+
+
+            <div class="domain-card">
+
+                <div class="domain-number">
+                    02
+                </div>
+
+                <h3>
+                    RAG
+                </h3>
+
+                <p>
+                    Retrieval-Augmented Generation,
+                    embeddings and vector search.
+                </p>
+
+            </div>
+
+
+            <div class="domain-card">
+
+                <div class="domain-number">
+                    03
+                </div>
+
+                <h3>
+                    Agentic AI
+                </h3>
+
+                <p>
+                    LangChain, LangGraph and
+                    multi-agent workflows.
+                </p>
+
+            </div>
+
+
+            <div class="domain-card">
+
+                <div class="domain-number">
+                    04
+                </div>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Classification, prediction,
+                    forecasting and analytics.
+                </p>
+
+            </div>
+
+
+            <div class="domain-card">
+
+                <div class="domain-number">
+                    05
+                </div>
+
+                <h3>
+                    AWS & Cloud
+                </h3>
+
+                <p>
+                    Cloud-based AI applications,
+                    APIs and serverless systems.
+                </p>
+
+            </div>
+
+
+            <div class="domain-card">
+
+                <div class="domain-number">
+                    06
+                </div>
+
+                <h3>
+                    MLOps & DevOps
+                </h3>
+
+                <p>
+                    Docker, CI/CD, deployment
+                    and production workflows.
+                </p>
+
+            </div>
 
 
         </div>
 
-    </header>
+    </div>
 
+</section>
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
 
-    <main id="home">
+<!-- =========================================
+     FEATURED PROJECTS
+========================================= -->
 
+<section
+    id="projects"
+    class="section projects">
 
-        <section class="hero">
+    <div class="container">
 
+        <div class="projects-intro">
 
-            <div class="container hero-container">
-
-
-                <!-- LEFT -->
-
-                <div class="hero-content">
-
-
-                    <span class="project-badge">
-
-                        AI • MACHINE LEARNING • GENERATIVE AI • CLOUD
-
-                    </span>
-
-
-                    <h1>
-
-                        R. Sugumar,
-                        <br>
-                        M.B.A.
-
-                    </h1>
-
-
-                    <h2>
-
-                        AI & Machine Learning
-                        Project Portfolio
-
-                    </h2>
-
-
-                    <p class="hero-description">
-
-                        Hands-on portfolio of AI, Machine Learning,
-                        Generative AI, RAG, Agentic AI, Python,
-                        Cloud, MLOps and software development
-                        projects.
-
-                    </p>
-
-
-                    <div class="hero-stats">
-
-
-                        <div>
-
-                            <strong>
-                                34+
-                            </strong>
-
-                            <span>
-                                PROJECTS
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                AI
-                            </strong>
-
-                            <span>
-                                & ML
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                Cloud
-                            </strong>
-
-                            <span>
-                                & DEPLOYMENT
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="hero-buttons">
-
-
-                        <a href="#projects"
-                            class="btn btn-primary">
-
-                            Explore Projects
-
-                        </a>
-
-
-                        <a href="https://github.com/sugumarranganathan"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-secondary">
-
-                            GitHub
-
-                        </a>
-
-
-                        <a href="https://www.linkedin.com/in/sugumar-ranganathan/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-secondary">
-
-                            LinkedIn
-
-                        </a>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- RIGHT -->
-
-                <div class="prediction-card">
-
-
-                    <div class="prediction-header">
-
-                        <span>
-                            WHAT I BUILD
-                        </span>
-
-                    </div>
-
-
-                    <div class="prediction-body">
-
-
-                        <h2>
-
-                            From business problem to
-                            working AI solution.
-
-                        </h2>
-
-
-                        <div class="prediction-line">
-
-                            <span>
-                                01
-                            </span>
-
-                            <strong>
-                                Machine Learning
-                            </strong>
-
-                        </div>
-
-
-                        <div class="prediction-line">
-
-                            <span>
-                                02
-                            </span>
-
-                            <strong>
-                                Generative AI
-                            </strong>
-
-                        </div>
-
-
-                        <div class="prediction-line">
-
-                            <span>
-                                03
-                            </span>
-
-                            <strong>
-                                RAG & Vector Search
-                            </strong>
-
-                        </div>
-
-
-                        <div class="prediction-line">
-
-                            <span>
-                                04
-                            </span>
-
-                            <strong>
-                                Agentic AI
-                            </strong>
-
-                        </div>
-
-
-                        <div class="prediction-line">
-
-                            <span>
-                                05
-                            </span>
-
-                            <strong>
-                                AWS & Cloud
-                            </strong>
-
-                        </div>
-
-
-                        <div class="prediction-line">
-
-                            <span>
-                                06
-                            </span>
-
-                            <strong>
-                                MLOps & DevOps
-                            </strong>
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
+            <div class="section-label">
+                FEATURED PROJECTS
             </div>
 
 
-        </section>
+            <h2 class="section-title">
+                Selected projects from the portfolio.
+            </h2>
+
+
+            <p class="section-description">
+                A growing collection of practical AI,
+                Machine Learning, Generative AI and
+                Agentic AI projects.
+            </p>
+
+        </div>
 
 
 
-        <!-- =====================================================
-             ABOUT
-        ====================================================== -->
+        <!-- =====================================
+             PROJECT 01
+        ====================================== -->
 
-        <section class="section"
-            id="about">
+        <article class="project-card">
 
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-
-                    <span>
-                        ABOUT THE PORTFOLIO
-                    </span>
-
-
-                    <h2>
-
-                        A collection of hands-on
-                        technology projects.
-
-                    </h2>
-
-
-                    <p>
-
-                        This portfolio presents hands-on projects
-                        developed across Machine Learning,
-                        Generative AI, RAG, Agentic AI, data
-                        analytics, cloud computing and software
-                        application development.
-
-                    </p>
-
-
-                    <p>
-
-                        Each project focuses on a practical problem
-                        and demonstrates the journey from data and
-                        business requirements to AI/ML implementation,
-                        application development and deployment.
-
-                    </p>
-
-
-                </div>
-
-
+            <div class="project-number">
+                PROJECT 01
             </div>
 
 
-        </section>
+            <div class="project-content">
 
+                <h3>
 
+                    <a
+                        href="projects/ecommerce-purchase-behaviour-ai/index.html">
 
-        <!-- =====================================================
-             PROJECT DOMAINS
-        ====================================================== -->
-
-        <section class="section project-light">
-
-
-            <div class="container"
-                id="domains">
-
-
-                <div class="section-heading">
-
-
-                    <span>
-                        PROJECT DOMAINS
-                    </span>
-
-
-                    <h2>
-
-                        34+ projects across multiple
-                        technology areas.
-
-                    </h2>
-
-
-                </div>
-
-
-
-                <div class="solution-grid">
-
-
-                    <div class="solution-card">
-
-                        <span class="solution-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Generative AI
-                        </h3>
-
-                        <p>
-                            LLM-powered applications
-                            and AI solutions.
-                        </p>
-
-                    </div>
-
-
-                    <div class="solution-card">
-
-                        <span class="solution-number">
-                            02
-                        </span>
-
-                        <h3>
-                            RAG
-                        </h3>
-
-                        <p>
-                            Retrieval-Augmented Generation,
-                            embeddings and vector search.
-                        </p>
-
-                    </div>
-
-
-                    <div class="solution-card">
-
-                        <span class="solution-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Agentic AI
-                        </h3>
-
-                        <p>
-                            LangChain, LangGraph and
-                            multi-agent workflows.
-                        </p>
-
-                    </div>
-
-
-                    <div class="solution-card">
-
-                        <span class="solution-number">
-                            04
-                        </span>
-
-                        <h3>
-                            Machine Learning
-                        </h3>
-
-                        <p>
-                            Classification, prediction,
-                            forecasting and analytics.
-                        </p>
-
-                    </div>
-
-
-                    <div class="solution-card">
-
-                        <span class="solution-number">
-                            05
-                        </span>
-
-                        <h3>
-                            AWS & Cloud
-                        </h3>
-
-                        <p>
-                            Cloud-based AI applications,
-                            APIs and serverless systems.
-                        </p>
-
-                    </div>
-
-
-                    <div class="solution-card">
-
-                        <span class="solution-number">
-                            06
-                        </span>
-
-                        <h3>
-                            MLOps & DevOps
-                        </h3>
-
-                        <p>
-                            Docker, CI/CD, deployment
-                            and production workflows.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================================
-             FEATURED PROJECTS
-        ====================================================== -->
-
-        <section class="section"
-            id="projects">
-
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-
-                    <span>
-                        FEATURED PROJECTS
-                    </span>
-
-
-                    <h2>
-
-                        Selected projects from
-                        the portfolio.
-
-                    </h2>
-
-
-                    <p>
-
-                        More projects will be added to this
-                        portfolio as the project collection
-                        is built.
-
-                    </p>
-
-
-                </div>
-
-
-
-                <!-- =================================================
-                     PROJECT 01
-                ================================================== -->
-
-                <article class="project-card">
-
-
-                    <div class="project-card-content">
-
-
-                        <span class="project-number">
-                            PROJECT 01
-                        </span>
-
-
-                        <h2>
-
-                            E-commerce Purchase
-                            Behaviour Prediction AI
-
-                        </h2>
-
-
-                        <p>
-
-                            An AI-powered web application that
-                            analyzes 12 customer activity inputs
-                            and uses a Random Forest classification
-                            model to predict customer purchase
-                            continuation risk.
-
-                        </p>
-
-
-                        <div class="technology-list">
-
-
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                Machine Learning
-                            </span>
-
-                            <span>
-                                Random Forest
-                            </span>
-
-                            <span>
-                                Django
-                            </span>
-
-                            <span>
-                                Pandas
-                            </span>
-
-                            <span>
-                                Scikit-learn
-                            </span>
-
-                            <span>
-                                Render
-                            </span>
-
-
-                        </div>
-
-
-                        <div class="project-buttons">
-
-
-                            <a href="projects/ecommerce-purchase-behaviour-ai/index.html"
-                                class="btn btn-primary">
-
-                                View Project →
-
-                            </a>
-
-
-                            <a href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/tree/main/projects/ecommerce-purchase-behaviour-ai"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn btn-secondary">
-
-                                GitHub
-
-                            </a>
-
-
-                            <a href="assets/images/ecommerce-purchase-behaviour-dashboard.png"
-                                target="_blank"
-                                class="btn btn-secondary">
-
-                                Images
-
-                            </a>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </article>
-
-
-
-                <!-- =================================================
-                     PROJECT 02
-                ================================================== -->
-
-                <article class="project-card">
-
-
-                    <div class="project-card-content">
-
-
-                        <span class="project-number">
-                            PROJECT 02
-                        </span>
-
-
-                        <h2>
-
-                            AI News Summarizer &
-                            Tamil Translator
-
-                        </h2>
-
-
-                        <p>
-
-                            Next-generation Multi-Agent AI News
-                            Intelligence Platform using AutoGen,
-                            Python, FastAPI and LLM technology to
-                            retrieve current news, generate concise
-                            summaries and translate them into
-                            natural Tamil.
-
-                        </p>
-
-
-                        <div class="technology-list">
-
-
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                AutoGen
-                            </span>
-
-                            <span>
-                                Multi-Agent AI
-                            </span>
-
-                            <span>
-                                LLM
-                            </span>
-
-                            <span>
-                                FastAPI
-                            </span>
-
-                            <span>
-                                News API
-                            </span>
-
-                            <span>
-                                Web Search
-                            </span>
-
-                            <span>
-                                Tamil Translation
-                            </span>
-
-
-                        </div>
-
-
-                        <div class="project-buttons">
-
-
-                            <a href="projects/ai-news-summarizer-tamil-translator/index.html"
-                                class="btn btn-primary">
-
-                                View Project →
-
-                            </a>
-
-
-                            <a href="https://github.com/sugumarranganathan/AI-News-Summarizer"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn btn-secondary">
-
-                                GitHub
-
-                            </a>
-
-
-                            <a href="assets/images/ai-news-summarizer-tamil-translator.png"
-                                target="_blank"
-                                class="btn btn-secondary">
-
-                                Images
-
-                            </a>
-
-
-                            <a href="https://www.linkedin.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn btn-secondary">
-
-                                LinkedIn
-
-                            </a>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </article>
-
-
-
-                <!-- =================================================
-                     PROJECT 03
-                ================================================== -->
-
-                <article class="project-card">
-
-
-                    <div class="project-card-content">
-
-
-                        <span class="project-number">
-                            PROJECT 03
-                        </span>
-
-
-                        <h2>
-
-                            Enterprise AI Email
-                            Automation
-
-                        </h2>
-
-
-                        <p>
-
-                            Multi-Agent Enterprise Email Assistant
-                            using LangGraph, LangChain, Groq,
-                            Gmail API, Qdrant RAG, FastAPI and
-                            Gradio to automate customer email
-                            analysis, knowledge retrieval,
-                            policy validation, response generation
-                            and Human-in-the-Loop approval.
-
-                        </p>
-
-
-                        <div class="technology-list">
-
-
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                LangGraph
-                            </span>
-
-                            <span>
-                                LangChain
-                            </span>
-
-                            <span>
-                                Groq
-                            </span>
-
-                            <span>
-                                Gmail API
-                            </span>
-
-                            <span>
-                                Qdrant
-                            </span>
-
-                            <span>
-                                RAG
-                            </span>
-
-                            <span>
-                                FastAPI
-                            </span>
-
-                            <span>
-                                Gradio
-                            </span>
-
-                            <span>
-                                Agentic AI
-                            </span>
-
-                            <span>
-                                Human-in-the-Loop
-                            </span>
-
-
-                        </div>
-
-
-                        <div class="project-buttons">
-
-
-                            <a href="projects/enterprise-ai-email-automation/index.html"
-                                class="btn btn-primary">
-
-                                View Project →
-
-                            </a>
-
-
-                            <a href="https://github.com/sugumarranganathan/Enterprise-AI-Email-Automation"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn btn-secondary">
-
-                                GitHub
-
-                            </a>
-
-
-                            <a href="assets/images/Enterprises%20AI%20Email%20Automation.png"
-                                target="_blank"
-                                class="btn btn-secondary">
-
-                                Images
-
-                            </a>
-
-
-                            <a href="https://www.linkedin.com/posts/sugumar-ranganathan_artificialintelligence-agenticai-multiagentai-activity-7490405357627043840-GPC9"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn btn-secondary">
-
-                                LinkedIn
-
-                            </a>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </article>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================================
-             TECHNOLOGIES
-        ====================================================== -->
-
-        <section class="section technology-section"
-            id="technologies">
-
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-
-                    <span>
-                        TECHNOLOGY STACK
-                    </span>
-
-
-                    <h2>
-
-                        Technologies across
-                        my project portfolio.
-
-                    </h2>
-
-
-                </div>
-
-
-
-                <div class="technology-list">
-
-
-                    <span>
-                        Python
-                    </span>
-
-                    <span>
-                        Machine Learning
-                    </span>
-
-                    <span>
-                        Scikit-learn
-                    </span>
-
-                    <span>
-                        Pandas
-                    </span>
-
-                    <span>
-                        NumPy
-                    </span>
-
-                    <span>
-                        Generative AI
-                    </span>
-
-                    <span>
-                        LLM
-                    </span>
-
-                    <span>
-                        RAG
-                    </span>
-
-                    <span>
-                        LangChain
-                    </span>
-
-                    <span>
-                        LangGraph
-                    </span>
-
-                    <span>
-                        AutoGen
-                    </span>
-
-                    <span>
-                        Qdrant
-                    </span>
-
-                    <span>
-                        FastAPI
-                    </span>
-
-                    <span>
-                        Django
-                    </span>
-
-                    <span>
-                        Gmail API
-                    </span>
-
-                    <span>
-                        AWS
-                    </span>
-
-                    <span>
-                        Docker
-                    </span>
-
-                    <span>
-                        Git
-                    </span>
-
-                    <span>
-                        GitHub
-                    </span>
-
-                    <span>
-                        GitHub Actions
-                    </span>
-
-                    <span>
-                        MLOps
-                    </span>
-
-                    <span>
-                        DevOps
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================================
-             PROJECT APPROACH
-        ====================================================== -->
-
-        <section class="section project-light">
-
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-
-                    <span>
-                        PROJECT APPROACH
-                    </span>
-
-
-                    <h2>
-
-                        From problem to
-                        deployable solution.
-
-                    </h2>
-
-
-                </div>
-
-
-
-                <div class="workflow">
-
-
-                    <div class="workflow-step">
-
-                        <span>
-                            01
-                        </span>
-
-                        <strong>
-                            Business Problem
-                        </strong>
-
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-
-                        <span>
-                            02
-                        </span>
-
-                        <strong>
-                            Data
-                        </strong>
-
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-
-                        <span>
-                            03
-                        </span>
-
-                        <strong>
-                            AI / ML
-                        </strong>
-
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-
-                        <span>
-                            04
-                        </span>
-
-                        <strong>
-                            Application
-                        </strong>
-
-                    </div>
-
-
-                    <div class="workflow-arrow">
-                        →
-                    </div>
-
-
-                    <div class="workflow-step">
-
-                        <span>
-                            05
-                        </span>
-
-                        <strong>
-                            Deployment
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================================
-             CONTACT
-        ====================================================== -->
-
-        <section class="links-section"
-            id="contact">
-
-
-            <div class="container">
-
-
-                <div class="section-heading centered">
-
-
-                    <span>
-                        LET'S CONNECT
-                    </span>
-
-
-                    <h2>
-
-                        Explore the projects
-                        and get in touch.
-
-                    </h2>
-
-
-                    <p>
-
-                        Interested in AI, Machine Learning,
-                        Generative AI, Agentic AI or
-                        software development?
-
-                    </p>
-
-
-                </div>
-
-
-
-                <div class="project-links">
-
-
-                    <a href="https://github.com/sugumarranganathan"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
-
-
-                        <strong>
-                            GitHub
-                        </strong>
-
-
-                        <span>
-                            View Projects →
-                        </span>
-
+                        E-commerce Purchase Behaviour
+                        Prediction AI
 
                     </a>
 
+                </h3>
 
 
-                    <a href="https://www.linkedin.com/in/sugumar-ranganathan/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link">
+                <p class="project-description">
 
-
-                        <strong>
-                            LinkedIn
-                        </strong>
-
-
-                        <span>
-                            Connect →
-                        </span>
-
-
-                    </a>
-
-
-
-                    <a href="mailto:contact.sugumarai@gmail.com"
-                        class="project-link">
-
-
-                        <strong>
-                            Email
-                        </strong>
-
-
-                        <span>
-                            Contact Me →
-                        </span>
-
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="footer">
-
-
-        <div class="container footer-container">
-
-
-            <div>
-
-
-                <strong>
-                    R. Sugumar, M.B.A.
-                </strong>
-
-
-                <p>
-
-                    AI • Machine Learning •
-                    Generative AI • Agentic AI • Cloud
+                    An AI-powered web application that
+                    analyzes 12 customer activity inputs
+                    and uses a Random Forest classification
+                    model to predict customer purchase
+                    continuation risk.
 
                 </p>
 
 
+                <div class="project-tags">
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                    <span class="tag">
+                        Machine Learning
+                    </span>
+
+                    <span class="tag">
+                        Random Forest
+                    </span>
+
+                    <span class="tag">
+                        Django
+                    </span>
+
+                    <span class="tag">
+                        Pandas
+                    </span>
+
+                    <span class="tag">
+                        Scikit-learn
+                    </span>
+
+                    <span class="tag">
+                        Render
+                    </span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        class="project-btn primary"
+                        href="projects/ecommerce-purchase-behaviour-ai/index.html">
+
+                        View Project →
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/sugumarranganathan/sugumar-ai-portfolio/tree/main/projects/ecommerce-purchase-behaviour-ai"
+                        target="_blank">
+
+                        GitHub
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="assets/images/ecommerce-purchase-behaviour-dashboard.png"
+                        target="_blank">
+
+                        Images
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================
+             PROJECT 02
+        ====================================== -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                PROJECT 02
             </div>
 
 
-            <div>
+            <div class="project-content">
+
+                <h3>
+
+                    <a
+                        href="projects/ai-news-summarizer/index.html">
+
+                        AI News Summarizer &
+                        Tamil Translator
+
+                    </a>
+
+                </h3>
 
 
-                <a href="#home">
+                <p class="project-description">
 
-                    Back to Top ↑
+                    A next-generation multi-agent AI news
+                    intelligence platform that retrieves
+                    current news, generates concise AI-powered
+                    summaries and translates them into
+                    natural, reader-friendly Tamil.
 
-                </a>
+                </p>
 
+
+                <div class="project-tags">
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                    <span class="tag">
+                        AutoGen
+                    </span>
+
+                    <span class="tag">
+                        Multi-Agent AI
+                    </span>
+
+                    <span class="tag">
+                        Groq
+                    </span>
+
+                    <span class="tag">
+                        FastAPI
+                    </span>
+
+                    <span class="tag">
+                        News API
+                    </span>
+
+                    <span class="tag">
+                        Tamil Translation
+                    </span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        class="project-btn primary"
+                        href="projects/ai-news-summarizer/index.html">
+
+                        View Project →
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/sugumarranganathan/AI-News-Summarizer"
+                        target="_blank">
+
+                        GitHub
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="assets/images/ai-news-summarizer-tamil-translator.png"
+                        target="_blank">
+
+                        Images
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://www.linkedin.com/posts/sugumar-ranganathan_artificialintelligence-agenticai-multiagentai-activity-7490405357627043840-GPC9"
+                        target="_blank">
+
+                        LinkedIn
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================
+             PROJECT 03
+        ====================================== -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+
+            <div class="project-content">
+
+                <h3>
+
+                    <a
+                        href="projects/enterprise-ai-email-automation/index.html">
+
+                        Enterprise AI Email Automation
+
+                    </a>
+
+                </h3>
+
+
+                <p class="project-description">
+
+                    A multi-agent enterprise email assistant
+                    that analyzes customer emails, classifies
+                    intent, detects priority and sentiment,
+                    retrieves company knowledge using RAG,
+                    applies business policies and generates
+                    professional responses with
+                    Human-in-the-Loop approval.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                    <span class="tag">
+                        LangGraph
+                    </span>
+
+                    <span class="tag">
+                        LangChain
+                    </span>
+
+                    <span class="tag">
+                        Groq
+                    </span>
+
+                    <span class="tag">
+                        Gmail API
+                    </span>
+
+                    <span class="tag">
+                        Qdrant
+                    </span>
+
+                    <span class="tag">
+                        RAG
+                    </span>
+
+                    <span class="tag">
+                        FastAPI
+                    </span>
+
+                    <span class="tag">
+                        Gradio
+                    </span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        class="project-btn primary"
+                        href="projects/enterprise-ai-email-automation/index.html">
+
+                        View Project →
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/sugumarranganathan/Enterprise-AI-Email-Automation"
+                        target="_blank">
+
+                        GitHub
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="assets/images/Enterprises AI Email Automation.png"
+                        target="_blank">
+
+                        Images
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://www.linkedin.com/posts/sugumar-ranganathan_artificialintelligence-agenticai-multiagentai-activity-7490405357627043840-GPC9"
+                        target="_blank">
+
+                        LinkedIn
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================
+             PROJECT 04
+        ====================================== -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+
+            <div class="project-content">
+
+                <h3>
+
+                    <a
+                        href="projects/ai-supply-chain-intelligence/index.html">
+
+                        AI Supply Chain Intelligence –
+                        Delay Detection & Solution BOT
+                        (SCI-BOT)
+
+                    </a>
+
+                </h3>
+
+
+                <p class="project-description">
+
+                    An AI-powered multi-agent supply chain
+                    intelligence system for intelligent shipment
+                    tracking, delay detection, supplier analysis,
+                    weather analysis, risk assessment and
+                    AI-driven business decision support.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                    <span class="tag">
+                        LangGraph
+                    </span>
+
+                    <span class="tag">
+                        LangChain
+                    </span>
+
+                    <span class="tag">
+                        Multi-Agent AI
+                    </span>
+
+                    <span class="tag">
+                        Groq
+                    </span>
+
+                    <span class="tag">
+                        RAG
+                    </span>
+
+                    <span class="tag">
+                        FAISS
+                    </span>
+
+                    <span class="tag">
+                        Sentence Transformers
+                    </span>
+
+                    <span class="tag">
+                        FastAPI
+                    </span>
+
+                    <span class="tag">
+                        Gradio
+                    </span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        class="project-btn primary"
+                        href="projects/ai-supply-chain-intelligence/index.html">
+
+                        View Project →
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/sugumarranganathan/AI-Supply-Chain-Intelligence-Delay-Detection-Solution-BOT"
+                        target="_blank">
+
+                        GitHub
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="assets/images/AI-Supply-Chain-Intelligence-Delay-Detection-Solution_BOT.pdf"
+                        target="_blank">
+
+                        Images
+
+                    </a>
+
+
+                    <a
+                        class="project-btn"
+                        href="https://www.linkedin.com/posts/sugumar-ranganathan_multi-agent-chatbot-activity-7488821704685920256-4Ecj"
+                        target="_blank">
+
+                        LinkedIn
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TECHNOLOGIES
+========================================= -->
+
+<section
+    id="technologies"
+    class="section technologies">
+
+    <div class="container">
+
+        <div class="section-label">
+            TECHNOLOGY STACK
+        </div>
+
+
+        <h2 class="section-title">
+            Technologies across my
+            project portfolio.
+        </h2>
+
+
+        <div class="technology-list">
+
+            <span class="technology">
+                Python
+            </span>
+
+            <span class="technology">
+                Machine Learning
+            </span>
+
+            <span class="technology">
+                Scikit-learn
+            </span>
+
+            <span class="technology">
+                Pandas
+            </span>
+
+            <span class="technology">
+                NumPy
+            </span>
+
+            <span class="technology">
+                Matplotlib
+            </span>
+
+            <span class="technology">
+                Generative AI
+            </span>
+
+            <span class="technology">
+                LLM
+            </span>
+
+            <span class="technology">
+                RAG
+            </span>
+
+            <span class="technology">
+                LangChain
+            </span>
+
+            <span class="technology">
+                LangGraph
+            </span>
+
+            <span class="technology">
+                AutoGen
+            </span>
+
+            <span class="technology">
+                Qdrant
+            </span>
+
+            <span class="technology">
+                FAISS
+            </span>
+
+            <span class="technology">
+                FastAPI
+            </span>
+
+            <span class="technology">
+                Django
+            </span>
+
+            <span class="technology">
+                Gradio
+            </span>
+
+            <span class="technology">
+                AWS
+            </span>
+
+            <span class="technology">
+                Docker
+            </span>
+
+            <span class="technology">
+                Git
+            </span>
+
+            <span class="technology">
+                GitHub
+            </span>
+
+            <span class="technology">
+                GitHub Actions
+            </span>
+
+            <span class="technology">
+                MLOps
+            </span>
+
+            <span class="technology">
+                DevOps
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PROJECT APPROACH
+========================================= -->
+
+<section class="section approach">
+
+    <div class="container">
+
+        <div class="section-label">
+            PROJECT APPROACH
+        </div>
+
+
+        <h2 class="section-title">
+            From problem to deployable solution.
+        </h2>
+
+
+        <div class="approach-grid">
+
+
+            <div class="approach-card">
+
+                <div class="approach-number">
+                    01
+                </div>
+
+                <h3>
+                    Business Problem
+                </h3>
+
+            </div>
+
+
+            <div class="approach-card">
+
+                <div class="approach-number">
+                    02
+                </div>
+
+                <h3>
+                    Data
+                </h3>
+
+            </div>
+
+
+            <div class="approach-card">
+
+                <div class="approach-number">
+                    03
+                </div>
+
+                <h3>
+                    AI / ML
+                </h3>
+
+            </div>
+
+
+            <div class="approach-card">
+
+                <div class="approach-number">
+                    04
+                </div>
+
+                <h3>
+                    Application
+                </h3>
+
+            </div>
+
+
+            <div class="approach-card">
+
+                <div class="approach-number">
+                    05
+                </div>
+
+                <h3>
+                    Deployment
+                </h3>
 
             </div>
 
 
         </div>
 
+    </div>
 
-    </footer>
+</section>
 
 
 
-    <script src="js/script.js"></script>
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section
+    id="contact"
+    class="section contact">
+
+    <div class="container">
+
+        <div class="section-label">
+            LET'S CONNECT
+        </div>
+
+
+        <h2 class="section-title">
+            Explore the projects
+            and get in touch.
+        </h2>
+
+
+        <p class="section-description">
+
+            Interested in AI, Machine Learning,
+            Generative AI, Agentic AI or
+            software development?
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+
+            <a
+                class="btn btn-primary"
+                href="https://github.com/sugumarranganathan"
+                target="_blank">
+
+                GitHub
+
+            </a>
+
+
+            <a
+                class="btn btn-secondary"
+                href="#projects">
+
+                View Projects →
+
+            </a>
+
+
+            <a
+                class="btn btn-secondary"
+                href="https://www.linkedin.com/in/sugumar-ranganathan/"
+                target="_blank">
+
+                LinkedIn
+
+            </a>
+
+
+            <a
+                class="btn btn-secondary"
+                href="mailto:contact.sugumarai@gmail.com">
+
+                Email Me
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-name">
+            R. Sugumar, M.B.A.
+        </div>
+
+
+        <div class="footer-text">
+            AI • Machine Learning • Generative AI • Cloud
+        </div>
+
+
+        <a
+            class="footer-email"
+            href="mailto:contact.sugumarai@gmail.com">
+
+            Email: contact.sugumarai@gmail.com
+
+        </a>
+
+    </div>
+
+</footer>
 
 
 </body>
