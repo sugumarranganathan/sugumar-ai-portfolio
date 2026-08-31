@@ -14,6 +14,112 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+
+    <!-- Experience Section Styling -->
+    <style>
+        .portfolio-experience {
+            background: #ffffff;
+        }
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .experience-card {
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 20px;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .experience-marker {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #f1f5f9;
+            color: #1d4ed8;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .experience-content h3 {
+            margin: 0 0 8px;
+        }
+
+        .experience-type,
+        .experience-date,
+        .experience-location,
+        .experience-summary,
+        .experience-skills {
+            margin: 6px 0;
+        }
+
+        .experience-type {
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .experience-date {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .experience-location {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .experience-summary {
+            margin-top: 16px;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .experience-skills {
+            margin-top: 14px;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        .experience-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .experience-status {
+            flex-shrink: 0;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 700px) {
+            .experience-card {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+
+            .experience-top {
+                flex-direction: column;
+            }
+        }
+    </style>
+
     <!-- Large Project Image Area - Standardized for Projects 01-09 -->
     <style>
         .featured-project-card {
@@ -107,6 +213,10 @@
 
                 <a href="#about">
                     About
+                </a>
+
+                <a href="#experience">
+                    Experience
                 </a>
 
                 <a href="#projects">
@@ -322,6 +432,119 @@
 
         </section>
 
+
+
+
+        <!-- =========================================
+             EXPERIENCE
+        ========================================== -->
+
+        <section id="experience"
+            class="section portfolio-experience">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>
+                        PROFESSIONAL EXPERIENCE
+                    </span>
+
+                    <h2>
+                        Experience across Business Analysis,
+                        Generative AI and AI-powered solutions.
+                    </h2>
+
+                </div>
+
+
+                <div class="experience-list">
+
+                    <div class="experience-card">
+
+                        <div class="experience-marker">
+                            <span>01</span>
+                        </div>
+
+                        <div class="experience-content">
+
+                            <div class="experience-top">
+
+                                <div>
+
+                                    <h3>
+                                        Generative AI Developer | AI-Powered Business Solutions
+                                    </h3>
+
+                                    <p class="experience-type">
+                                        Generative AI Developer | AI Chatbots | Multi-Agent AI |
+                                        AI-Powered Business Solutions · Freelance
+                                    </p>
+
+                                </div>
+
+                                <span class="experience-status">
+                                    Present
+                                </span>
+
+                            </div>
+
+                            <p class="experience-date">
+                                Aug 2025 – Present
+                            </p>
+
+                            <p class="experience-location">
+                                Chennai, Tamil Nadu, India · Remote
+                            </p>
+
+                            <p class="experience-summary">
+                                Generative AI Developer focused on AI chatbots,
+                                Multi-Agent AI and AI-powered business solutions.
+                            </p>
+
+                            <p class="experience-skills">
+                                <strong>Skills:</strong>
+                                Artificial Intelligence (AI), Data Analysis and +1 skill
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-card">
+
+                        <div class="experience-marker">
+                            <span>02</span>
+                        </div>
+
+                        <div class="experience-content">
+
+                            <h3>
+                                Business Analyst
+                            </h3>
+
+                            <p class="experience-type">
+                                Private Company · Full-time
+                            </p>
+
+                            <p class="experience-date">
+                                Jun 2006 – Apr 2025 · 18 yrs 11 mos
+                            </p>
+
+                            <p class="experience-location">
+                                On-site
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
         <!-- =========================================
